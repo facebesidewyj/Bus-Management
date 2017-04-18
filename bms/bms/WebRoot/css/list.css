@@ -1,0 +1,10 @@
+.STYLE2 {font-size: 18px}
+.STYLE3 {font-size: 14px}
+.STYLE4 {font-size: 16px}
+a{cursor:pointer; text-decoration:none; color:#CC0066 }
+a:hover{text-decoration:underline}
+img{border:0}
+h1{border-top: 5px;}
+.list_r_title_text3{margin-right:-3px;padding-left:5px;float:left;margin-top:8px;margin-left:167px;}
+.list_r_title_text3a{float:left;width:14px;height:15px;margin-left:6px;margin-right:6px;}
+.list_r_title_text3b{float:left;}

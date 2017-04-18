@@ -1,0 +1,144 @@
+A:link {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: "宋体"; TEXT-DECORATION: underline
+}
+A:visited {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: "宋体"; TEXT-DECORATION: underline
+}
+A:hover {
+	FONT-SIZE: 12px; COLOR: red; FONT-FAMILY: "宋体"; TEXT-DECORATION: underline
+}
+A.title:link {
+	FONT-SIZE: 14px; COLOR: red; FONT-FAMILY: "宋体"; TEXT-DECORATION: underline
+}
+A.title:visited {
+	FONT-SIZE: 14px; COLOR: red; FONT-FAMILY: "宋体"; TEXT-DECORATION: underline
+}
+A.title:hover {
+	FONT-SIZE: 14px; COLOR: red; FONT-FAMILY: "宋体"; TEXT-DECORATION: underline
+}
+A.line1:link {
+	COLOR: red; TEXT-DECORATION: underline
+}
+A.line1:hover {
+	COLOR: #ff6600; TEXT-DECORATION: underline
+}
+A.line1:visited {
+	TEXT-DECORATION: underline
+}
+A.line1:active {
+	COLOR: #ff6600; TEXT-DECORATION: underline
+}
+BODY {
+	MARGIN-TOP: 1px; FONT-SIZE: 9pt; MARGIN-LEFT: 0px; LINE-HEIGHT: normal; MARGIN-RIGHT: 0px; FONT-FAMILY: "宋体"
+}
+TABLE {
+	FONT-SIZE: 12px; LINE-HEIGHT: 150%; font-face: "宋体"
+}
+TABLE.dataclass {
+	MARGIN: 2px; WIDTH: 750px
+}
+SPAN.Listrow1 {
+	PADDING-RIGHT: 1px; PADDING-LEFT: 1px; PAGE-BREAK-BEFORE: left; PADDING-BOTTOM: 1px; COLOR: #006699; TEXT-INDENT: 0pt; PADDING-TOP: 1px; LETTER-SPACING: 1pt; TEXT-ALIGN: left
+}
+SPAN.Listrow-1 {
+	PADDING-RIGHT: 1px; PADDING-LEFT: 1px; PADDING-BOTTOM: 1px; COLOR: #cc6600; PADDING-TOP: 1px; LETTER-SPACING: 1pt
+}
+TR.trhead {
+	BORDER-RIGHT: thin; BORDER-TOP: thin; FONT-WEIGHT: bold; FONT-SIZE: 12px; MARGIN-BOTTOM: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: thin; COLOR: #000000; BORDER-BOTTOM: thin; HEIGHT: 15pt; BACKGROUND-COLOR: #eeeeee; TEXT-ALIGN: left
+}
+TR.Listrow1 {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; FONT-SIZE: 12px; BACKGROUND-IMAGE: none; MARGIN: 20pt 50pt 50pt; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: repeat; FONT-FAMILY: "宋体"; HEIGHT: 15pt; BACKGROUND-COLOR: #eeeeee; TEXT-ALIGN: left
+}
+TR.Listrow-1 {
+	FONT-SIZE: 12px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: repeat; FONT-FAMILY: "宋体"; HEIGHT: 15pt; BACKGROUND-COLOR: #fff5ec; TEXT-ALIGN: left
+}
+TR.Listrow-2 {
+	FONT-SIZE: 12px; BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: repeat; FONT-FAMILY: "宋体"; HEIGHT: 15pt; BACKGROUND-COLOR: #f1fcfe; TEXT-ALIGN: left
+}
+.zw {
+	FONT-SIZE: 12px; LINE-HEIGHT: 120%; FONT-FAMILY: "宋体"
+}
+.line {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+.left {
+	FONT-SIZE: 14px; COLOR: #006600; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.input {
+	BACKGROUND-COLOR: #f9ffe1
+}
+.input2 {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #000000 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #ffffff 1px solid
+}
+.enter {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #ffffff 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #ffffff 1px solid; COLOR: #ffffff; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"; BACKGROUND-COLOR: #a9a214
+}
+A:active {
+	TEXT-DECORATION: underline
+}
+.newstitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 18px; COLOR: #0066cc; LINE-HEIGHT: 120%; FONT-FAMILY: "??ì?"
+}
+.news {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #0033cc; LINE-HEIGHT: 150%; FONT-FAMILY: "??ì?"; WHITE-SPACE: pre
+}
+.n {
+	FONT-SIZE: 12px; COLOR: #ffffff
+}
+.2nd {
+	BORDER-RIGHT: #000000 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 1px; FONT-WEIGHT: bolder; FONT-SIZE: 12px; PADDING-BOTTOM: 1px; BORDER-LEFT: #ffffff 1px solid; PADDING-TOP: 3px; BORDER-BOTTOM: #000000 1px solid; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"; BACKGROUND-COLOR: #e6d8c6
+}
+.newstext {
+	FONT-SIZE: 14px; COLOR: #000000; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.thin {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+.clsFontBlack {
+	FONT-SIZE: 12px; COLOR: #000000
+}
+.n04 {
+	FONT-SIZE: 12px; COLOR: #999999
+}
+.p9 {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 120%; FONT-FAMILY: "宋体"
+}
+.yellow {
+	FONT-SIZE: 12px; COLOR: #ffcc00
+}
+.white {
+	FONT-SIZE: 12px; COLOR: #ffffff
+}
+.white:hover {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+.dot {
+	FONT-SIZE: 9pt
+}
+.red {
+	FONT-SIZE: 14px; COLOR: #000000
+}
+.title {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000000
+}
+TABLE.tabletoolbar {
+	WIDTH: 750px
+}
+.biaoti {
+	FONT-WEIGHT: bold; FONT-SIZE: 18px; COLOR: #0066cc; LINE-HEIGHT: 120%
+}
+FONT {
+	FONT-SIZE: 9pt
+}
+a1:link {
+	FONT-SIZE: 12px; COLOR: #ff0000; TEXT-DECORATION: underline
+}
+a1:visited {
+	FONT-SIZE: 12px; COLOR: #ff0000; TEXT-DECORATION: underline
+}
+a1:hover {
+	FONT-SIZE: 12px; COLOR: #ff6600
+}
+a1:active {
+	FONT-SIZE: 12px; COLOR: #ff6600
+}

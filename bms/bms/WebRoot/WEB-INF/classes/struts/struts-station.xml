@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="station" extends="common" namespace="/">
+		<action name="stationAction_*" class="pers.yijin.bms.web.action.StationAction" method="{1}">
+			<result name="showInfo">/WEB-INF/jsp/listSt.jsp</result>
+			<result name="toAddStation">/WEB-INF/jsp/addSt.jsp</result>
+			<result name="addStation" type="redirectAction">
+				<param name="actionName">stationAction_showInfo</param>
+				<param name="namespace">/</param>
+			</result>
+			<result name="deleteStationById" type="redirectAction">
+				<param name="actionName">stationAction_showInfo</param>
+				<param name="namespace">/</param>
+			</result>
+			<result name="updateStationByIdForUI">/WEB-INF/jsp/updateStInfo.jsp</result>
+			<result name="updateStation" type="redirectAction">stationAction_showInfo</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,41 @@
+<PUBLIC:ATTACH EVENT="oncontentready" ONEVENT="fnInit()">
+<script language=javascript>
+function fnInit(){
+ var objVal = element.value;
+ style.color= 'navy';
+ element.runtimeStyle.backgroundColor="transparent";
+ element.runtimeStyle.cursor="hand";
+ element.runtimeStyle.borderWidth="0px";
+ element.runtimeStyle.height='25';
+  if(objVal.length==2){
+    element.runtimeStyle.width='54';
+    element.runtimeStyle.backgroundImage ='url('+imgUrl+'mousedown.gif)';
+    setMethod('')
+  }else if(objVal.length==4){
+    element.runtimeStyle.width='74';
+    element.runtimeStyle.backgroundImage ='url('+imgUrl+'mousedown4.gif)';
+    setMethod('4')
+  }else if(objVal.length==6){
+     element.runtimeStyle.width='100';
+     element.runtimeStyle.backgroundImage ='url('+imgUrl+'mousedown6.gif)';
+     setMethod('6')
+  }else if(objVal.length==8){
+     element.runtimeStyle.width='130';
+     element.runtimeStyle.backgroundImage ='url('+imgUrl+'mousedown8.gif)';
+     setMethod('8')
+  }else{
+     element.runtimeStyle.width='100';
+     element.runtimeStyle.backgroundImage ='url('+imgUrl+'mousedown6.gif)';
+     setMethod('6')
+  }
+}
+
+function setMethod(val){
+     onmouseout  = function kk(){style.color="navy";  element.runtimeStyle.backgroundImage ='url('+imgUrl+'mousedown'+val+'.gif)';};
+     onmouseover = function fff(){style.color="red";  element.runtimeStyle.backgroundImage ='url('+imgUrl+'mousemove'+val+'.gif)';};
+     onmouseup   = function ff(){style.color="green";element.runtimeStyle.backgroundImage ='url('+imgUrl+'mousemove'+val+'.gif)';};
+     onmousedown = function ss(){style.color="blue"; element.runtimeStyle.backgroundImage ='url('+imgUrl+'mousemove'+val+'.gif)';};
+}
+
+
+ </script>
