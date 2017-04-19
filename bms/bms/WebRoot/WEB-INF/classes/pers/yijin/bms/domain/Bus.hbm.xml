@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE hibernate-mapping PUBLIC 
+	    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="pers.yijin.bms.domain.Bus" table="bus">
+		<id name="id">
+			<generator class="native"></generator>
+		</id>
+		<property name="busName"></property>
+		<property name="startStation"></property>
+		<property name="endStation"></property>
+		<property name="bus_time"></property>
+		<set name="stationList" table="bus_station">
+			<key column="busId"></key>
+			<many-to-many class="pers.yijin.bms.domain.Station" column="stationId"></many-to-many>
+		</set>
+	</class>
+</hibernate-mapping>

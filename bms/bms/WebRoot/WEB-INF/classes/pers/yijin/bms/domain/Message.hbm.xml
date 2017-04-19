@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE hibernate-mapping PUBLIC 
+	    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="pers.yijin.bms.domain.Message" table="message">
+		<id name="id">
+			<generator class="native"></generator>
+		</id>
+		<property name="theme"></property>
+		<property name="message"></property>
+		<property name="msgTime"></property>
+		<many-to-one name="user" class="pers.yijin.bms.domain.User"
+			column="userId"></many-to-one>
+	</class>
+</hibernate-mapping>

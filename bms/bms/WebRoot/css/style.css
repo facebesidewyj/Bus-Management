@@ -1,0 +1,669 @@
+td
+{ font-size:12px; color:#000000;}
+form
+{padding:0px;margin:0px}
+iframe
+{margin-top: 0px;margin-left: 0px; border:0px;}
+A:link
+{  font-size:12px;   color:#000000;   text-decoration:none;}
+A:active
+{   font-size:12px;    color: #000000;}
+A:visited
+{   font-size:12px;    color: #000000;    text-decoration:none;}
+A:hover
+{   font-size:12px;    COLOR: #ff0000;    text-decoration: none}
+
+.A1:link
+{  font-size:12px;   color:#FF3300;   text-decoration:none;}
+.A1:active
+{   font-size:12px;    color: #FF3300;}
+.A1:visited
+{   font-size:12px;    color: #FF3300;    text-decoration:none;}
+.A1:hover
+{   font-size:12px;    COLOR:#000000;    text-decoration: none}
+
+.font
+{color: #ff0000;}
+.font1
+{color: #4A61F9;}
+.font2
+{color: #2D990D;}
+.inText
+{
+	font-size:12px;
+	color:#000000;
+	background-color:#F4F9FF;
+	border-top: 1px solid #aaaaaa;
+	border-right: 1px solid #eeeeee;
+	border-bottom: 1px solid #eeeeee;
+	border-left: 1px solid #aaaaaa;}
+.input_btn
+{
+	font-size:12px;
+	color:#000000;
+	height: 20px;
+	background-color:#B9DCFF;
+	padding: 2px;
+	border: 1px outset;
+	clip:  rect(   );
+	margin-right: 5px;
+}
+
+.input_sel
+{
+	font-size:12px;
+	color:#000000;
+	height: 20px;
+	
+	padding: 2px;
+	border: 1px solid;
+	clip:  rect(   );
+	margin-right: 5px;
+}
+
+/*
+ 各种按钮class
+*/
+.tree_row   /*隐藏或展开树和头文件的线条底色*/
+{
+	background-color:#C5E0FA;
+}
+.btn_save{
+	font-size:12px;
+	color:#000000;
+	height: 20px;
+	background-color:#B9DCFF;
+	padding: 2px;
+	border: 1px outset;
+	clip:  rect(   );
+	margin-right: 5px;
+
+}
+.btn_delete{
+	font-size:12px;
+	color:#000000;
+	height: 20px;
+	background-color:#B9DCFF;
+	padding: 2px;
+	border: 1px outset;
+	clip:  rect(   );
+	margin-right: 5px;
+
+
+}
+.btn_go{
+	font-size:12px;
+	color:#000000;
+	height: 20px;
+	background-color:#B9DCFF;
+	padding: 2px;
+	border: 1px outset;
+	clip:  rect(   );
+	margin-right: 5px;
+
+
+}
+.btn_pre{
+	font-size:12px;
+	color:#000000;
+	height: 20px;
+	background-color:#B9DCFF;
+	padding: 2px;
+	border: 1px outset;
+	clip:  rect(   );
+	margin-right: 5px;
+}
+.h_current  /*当前模块*/
+ { 
+  /*color:#ffffff;*/
+	background-image:url(/spddr/images/h_current.gif);
+	background-repeat:no-repeat;
+	width:65;
+ }
+  .h_uncurrent  /*非当前模块*/
+ {
+    background-image:url(/spddr/images/top_tbg.gif);
+ }
+.btn_next{
+	font-size:12px;
+	color:#000000;
+	height: 20px;
+	background-color:#B9DCFF;
+	padding: 2px;
+	border: 1px outset;
+	clip:  rect(   );
+	margin-right: 5px;
+}
+.btn_new{
+	font-size:12px;
+	color:#000000;
+	height: 20px;
+	background-color:#B9DCFF;
+	padding: 2px;
+	border: 1px outset;
+	clip:  rect(   );
+	margin-right: 5px;
+}
+
+.btn_return{
+	font-size:12px;
+	color:#000000;
+	height: 20px;
+	background-color:#B9DCFF;
+	padding: 2px;
+	border: 1px outset;
+	clip:  rect(   );
+	margin-right: 5px;
+}
+
+/*结束按钮class*/
+.inTextarea
+{   font-size:12px;
+    background-color:#F4F9FF;
+    border-top: 1px solid #aaaaaa;
+	border-right: 1px solid #eeeeee;
+	border-bottom: 1px solid #eeeeee;
+	border-left: 1px solid #aaaaaa;
+    scrollbar-arrow-color:green;
+	SCROLLBAR-FACE-COLOR: #8DB4DB;
+	SCROLLBAR-HIGHLIGHT-COLOR: #99CCFF;
+	SCROLLBAR-SHADOW-COLOR: #6699CC;
+	SCROLLBAR-3DLIGHT-COLOR: #F3F7F0;
+	SCROLLBAR-TRACK-COLOR: #ADCFF1;
+	SCROLLBAR-DARKSHADOW-COLOR: #ADD8E6;
+}
+.select
+{font-size:12px;background-color:#DFE9F7;
+select-face-color:#DFE9F7
+ }
+.input.inText{
+	font-size:12px;
+	color:#000000;
+   border:1px solid #000000;
+}
+.list-table-header
+{   padding-left:2px;
+	Color:"#ffffff";
+    background-color:"#3E8EDF";
+    border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+    border-left-color:#2072C4;
+	border-top-color:#ffffff;
+	border-right-color: #ffffff;
+	border-bottom-color:#2072C4;
+}
+.list-table
+{   padding-left:2px;
+    word-break:break-all;
+    background-color:"#CFE9F8";
+    border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+    border-left-color:#ffffff;
+	border-top-color:#ffffff ;
+	border-right-color:#9EC7EF;
+	border-bottom-color:#9EC7EF ;
+}
+.td-nodata
+{   padding-left:2px;
+    word-break:break-all;
+    background-color:"#CFE9F8";
+    border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+    border-left-color:#ffffff;
+	border-top-color:#ffffff ;
+	border-right-color:#9EC7EF;
+	border-bottom-color:#9EC7EF ;
+}
+.list_table_hj
+{       padding-left:2px;
+        background-color:#CFE9F8;
+        border-top-width: 2px;
+		border-right-width: 1px;
+		border-bottom-width: 1px;
+		border-left-width: 0px;
+		border-top-style: solid;
+		border-right-style: solid;
+		border-bottom-style: solid;
+		border-left-style: solid;
+        border-left-color:#99CCDD;
+		border-top-color:#99CCDD ;
+		border-right-color:#99CCDD;
+		border-bottom-color:#99CCDD;
+}
+
+.tableframe
+{font-size: 12px;border:1px solid #91A1D7;}
+.font
+{color:#CC0000}
+.td
+{background:"#9DC5F0"; padding-left:5px}
+.td_new{background:"#D0CBF1";border:1px solid #91A1D7;}
+.td_page
+{background-color:"#9EC7EF";}
+.td_form
+{background-color:"#C8E2F2"; border-bottom: 1px solid #ffffff; padding-left:5px;padding-right:5px}
+.table
+{
+   font-size: 12px;
+   border: 1px solid;
+   table-layout: fixed ;
+   border-left:1px solid #ADD8E6;
+   border-top:1px solid #ADD8E6;
+   border-bottom:1px solid #ADD8E6;
+   border-right:1px solid #ADD8E6;
+ }
+.bodyspace{margin-top: 2px;margin-left: 5px;}
+.bodytree{background:#D6DDF3;margin-left: 5px;margin-top: 2px;}
+.menutonr-bak
+{	Color:"#ffffff";
+    border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-left-color: #FFFFFF;
+	border-top-color: #91A1D7;
+	border-right-color: #91A1D7;
+	border-bottom-color: #FFFFFF;
+	background-color: #7893ED;}
+
+.menutonr-font {
+    cursor:hand;
+   	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #7893ED;
+	border-bottom: 1px solid #7893ED;
+	border-left: 1px solid #FFFFFF;
+	background-color: #C7D1F8;
+}
+.font_filter
+{font-size: 16px;color:#66CC33;filter: DropShadow(Color=#000000, OffX=+2, OffY=-8, Positive=4);}
+ .proccess{border:0px  solid; border-color:#99CC33; width:2;height:20;background:green;margin:0}
+ .copy {
+    font-family: "宋体";
+    font-size: 12px;
+    color: #444444;
+ }
+ .navPoint {
+    COLOR: #009933; CURSOR: hand; FONT-FAMILY: "Webdings"; FONT-SIZE: 12px
+ }
+BODY {
+	  margin-left:0;
+	  margin-top:0;
+	  margin-right:0;
+	  margin-bottom:0;
+	scrollbar-arrow-color:green;
+	SCROLLBAR-FACE-COLOR: #8DB4DB;
+	SCROLLBAR-HIGHLIGHT-COLOR: #99CCFF;
+	SCROLLBAR-SHADOW-COLOR: #6699CC;
+	SCROLLBAR-3DLIGHT-COLOR: #F3F7F0;
+	SCROLLBAR-TRACK-COLOR: #ADCFF1;
+	SCROLLBAR-DARKSHADOW-COLOR: #ADD8E6;
+	/*background-attachment: scroll;*/
+	/*background: url(../images/picture/kpt_t_bg.gif) repeat-y right;*/
+	background-color:#EFF7FF;
+}
+.divTree{
+    scrollbar-arrow-color:green;
+	SCROLLBAR-FACE-COLOR: #ADD8E6;
+	SCROLLBAR-HIGHLIGHT-COLOR: #99CCFF;
+	SCROLLBAR-SHADOW-COLOR: #6699CC;
+	SCROLLBAR-3DLIGHT-COLOR: #F3F7F0;
+	SCROLLBAR-TRACK-COLOR: #ADD8E6;
+	SCROLLBAR-DARKSHADOW-COLOR: #ADD8E6;
+	background-attachment: scroll;
+}
+.onlyDisp{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	border:0px;
+	background-color:transparent;
+}
+.BodyTreeStyle{
+  background-Color:#6778d4;
+}
+.BodyStyle{
+  margin-left:0;
+  margin-top:0;
+  margin-right:0;
+  margin-bottom:0;
+  scroll:no;
+  font-family:  "??";
+  font-size:9pt;
+  background-Color:#dde2fe;
+}
+.DivStyle{
+  background-Color:#dde2fe;
+  height:780;
+}
+.FlashTabBed{
+  background-Color:;
+  border:3pt outset;
+  top:5
+  border-top:0pt white solid;
+  height:740;
+  width:735;
+}
+
+.FlashTabBedMap{
+  background-Color:;
+  border:3pt outset;
+  top:0
+  border-top:0pt white solid;
+  height:520;
+  width:600;
+}
+
+
+.DivTabBed{
+   position:absolute;
+   left:18;
+   top:50;
+   width:792;
+   height:500;
+   z-index:1;
+   border-style:hidden;
+   background-Color:#dde2fe;
+ }
+ .DivTabBed1{
+   position:absolute;
+   left:18;
+   top:50;
+   width:625;
+   height:500;
+   z-index:1;
+   background-Color:#dde2fe;
+ }
+.DivTabBed2{
+   position:absolute;
+   left:18;
+   top:50;
+   width:792;
+   height:710;
+   z-index:1;
+   border-style:hidden;
+   }
+   .DivTabBed5{
+   position:absolute;
+   left:18;
+   top:50;
+   width:792;
+   height:480;
+   z-index:1;
+   border-style:hidden;
+   }
+
+.DivTabBed3{
+   position:absolute;
+   left:18;
+   top:50;
+   width:780;
+   height:380;
+   z-index:1;
+   border-style:hidden;
+ }
+.DivTabBed4{
+   position:absolute;
+   left:18;
+   top:50;
+   width:780;
+   height:470;
+   z-index:1;
+   border-style:hidden;
+ }
+
+.TabSheetDefault{
+  top:1;
+  height:26;
+  background:#d3d3ce;
+  cursor:default;
+  border-top:1pt white solid;
+  border-left:1pt white solid;
+  border-right:1pt black solid;
+  border-bottom:1pt white solid;
+};
+.TabSheetSelect{
+  top:0;
+  height:27;
+  cursor:hand;
+  background:#e9e9e5;
+  border-top:1pt white solid;
+  border-left:1pt white solid;
+  border-right:1.5pt black solid;
+  color:red;
+};
+.TableStyle{
+  background-color:#dde2fe;
+  cursor:hand;
+  border:0px black solid;
+  font-family:??;
+  font-size:9pt;
+}
+.TableHeadStyle{
+  color:black;
+  font-family:??;
+  font-size:9pt;
+  font-weight:true;
+  background-color:;
+};
+.TableLineStyle{
+  color:black;
+  background-color:white;
+};
+.TableTHStyle{
+  background-color:#dedede;
+  border-left:1px white solid;
+  border-top:1px white solid;
+  border-right:1px black solid;
+  border-bottom:1px black solid;
+}
+.InputNoStyle{
+  border:0;
+  cursor:hand;
+  width:100%;
+  background-color:transparent;
+}
+.InputSelectStyle {
+  border-left:3pt white solid;
+  border-top:4pt red solid;
+  border-right:0pt gray solid;
+  border-bottom:1pt navy solid;
+  background-color:transparent;
+}
+.InputTextAreaStyle {
+  border-left:0pt white solid;
+  border-top:0pt red solid;
+  border-right:0pt gray solid;
+  border-bottom:1pt navy solid;
+  background-color:transparent;
+}
+.InputButtomStyle{
+  border-left:0pt white solid;
+  border-top:0pt red solid;
+  border-right:0pt gray solid;
+  border-bottom:1pt black solid;
+  background-color:transparent;
+}
+.InputButtomStylel {
+  border-left:0pt white solid;
+  border-top:0pt red solid;
+  border-right:0pt gray solid;
+  border-bottom:1pt black solid;
+  background-color:transparent;
+}
+.InputLeftStyle{
+  border-left:1pt black solid;
+  border-top:0pt red solid;
+  border-right:0pt gray solid;
+  border-bottom:0pt navy solid;
+  background-color:transparent;
+}
+.InputTopStyle{
+  border-left:0pt white solid;
+  border-top:1pt black solid;
+  border-right:0pt gray solid;
+  border-bottom:0pt navy solid;
+  background-color:transparent;
+}
+.InputRightStyle{
+  border-left:0pt white solid;
+  border-top:0pt red solid;
+  border-right:1pt black solid;
+  border-bottom:0pt navy solid;
+  background-color:transparent;
+}
+
+.InputNoneStyle{
+  overflow:hidden;
+  border:0px;
+  background-color:transparent;
+  width:100%;
+}
+.InputReadonlyStyle{
+  overflow:hidden;
+  border:0px;
+  background-color:transparent;
+
+}
+.InputAllStyle{
+  border-left:1pt black solid;
+  border-top:1pt black solid;
+  border-right:1pt black solid;
+  border-bottom:1pt black solid;
+  background-color:transparent;
+}
+.MemuStyle{
+  background-color:#c0c0c0;
+  width:10;
+  border-left:1pt white solid;
+  border-top:1pt white solid;
+  border-right:1pt gray solid;
+  border-bottom:1pt gray solid;
+}
+.TreeViewStyle{
+  cursor:hand;
+  font-family:??;
+  font-size:10pt;
+  color:white;
+}
+.editAddTable{
+   border-left:1px solid #ADD8E6;
+   border-top:1px solid #ADD8E6;
+   border-bottom:1px solid #ADD8E6;
+   border-right:1px solid #ADD8E6;
+}
+.spanclass{
+	background-color : Silver;
+	background-attachment : fixed;
+}
+.pagebuttom{
+   background:url(../images/picture/jiao1bg2_bg.gif);
+
+}
+.buttontop{
+   height:22;
+   background:url(../images/picture/kpt_t.gif);
+
+}
+.linemiddle{
+  /*background-color:#0D71D5 */
+background:url(../images/picture/l_dwgk_bg.gif);
+}
+.gavination{
+  background:url(../images/picture/jiao1bg2_bg.gif);
+}
+.style1 {
+  color: #FFFFFF;
+}
+
+a.white:link{	color:#ffffff;	text-decoration: none;}
+a.white:hover{text-decoration: underline;}
+a.white:active{color: #FFCC00;	text-decoration: underline;}
+a.white:visited{	color: #CC9900;	text-decoration: none;}
+
+.menu:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.menu:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.menu:active {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.menu:hover {
+	COLOR:#FF0000; TEXT-DECORATION: underline
+}
+.child {display:none}
+#menubar {
+        BACKGROUND: rgb(212,208,200); FONT: menu; CURSOR: default; POSITION: relative;Z-INDEX:10000;
+}
+#menubar .root {
+      color:#ffffff;
+}
+#menubar TABLE {
+        BORDER-RIGHT: gray 1px solid; PADDING-RIGHT: 0pt; BORDER-TOP: #eeeeee 1px solid; DISPLAY: none; PADDING-LEFT: 0pt; BACKGROUND: #0950A0; PADDING-BOTTOM: 0pt; MARGIN: 0pt; FONT: menu; BORDER-LEFT: #eeeeee 1px solid; PADDING-TOP: 0pt; BORDER-BOTTOM: gray 1px solid; POSITION: absolute;
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorStr=#0950A0,endColorStr=#ffffff,GradientType=1);
+}
+#menubar TABLE TD {
+        PADDING-RIGHT: 15pt; PADDING-LEFT: 12pt; PADDING-BOTTOM: 2pt; MARGIN: 0pt; PADDING-TOP: 0pt
+}
+#menubar .highlight {
+        BACKGROUND: #0950A0; COLOR: white;
+}
+#menubar .disabledhighlight {
+        BACKGROUND: red; COLOR: gray
+}
+
+#menubar .disabled {
+        COLOR: gray
+}
+
+.menutable {
+        BACKGROUND-COLOR: #ffffff; BORDER-BOTTOM: #307ce8 1px outset; BORDER-LEFT: #307ce8 10px solid; BORDER-RIGHT: #307ce8 1px outset; BORDER-TOP: #94bcf3 1px outset; FONT-SIZE: 12px; POSITION: absolute;z-Index:10000
+}
+.menutrin {
+        BACKGROUND-COLOR: #1a71e6; COLOR: #ffffff; CURSOR: hand
+}
+.menutrout {
+        COLOR: #000000; CURSOR: hand
+}
+.menuBar{
+  BACKGROUND-COLOR: #1a71e6;
+}
+.showTree{
+  font-size:16px;
+}
+
+.setroleobject{
+  color:red;
+  cursor:hand;
+}
+
+.tableBk {
+	border: 1px outset #0099CC;
+	background-color: #EFF7FF;
+}
+.fontTitle{
+  font-family:宋体;font-size:20px;font-weight:bold;
+}
