@@ -8,7 +8,7 @@
 		<meta http-equiv="pragma" content="no-cache">
 		<meta http-equiv="cache-control" content="no-cache">
 		<meta http-equiv="expires" content="0">
-		<link href="css/my_domain/main.css" type=text/css rel=stylesheet>
+		<link href="${pageContext.request.contextPath}/css/my_domain/main.css" type=text/css rel=stylesheet>
 	</head>
 	
 	<body>

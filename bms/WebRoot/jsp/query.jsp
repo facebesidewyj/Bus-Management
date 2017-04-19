@@ -7,7 +7,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>无标题文档</title>
-		<link href="css/my_domain/main.css" type="text/css" rel="stylesheet">
+		<link href="${pageContext.request.contextPath}/css/my_domain/main.css" type="text/css" rel="stylesheet">
 		<script language="javascript">
 		 function loadBusNum() { //将下拉框里的值传给文本框
 			var index = document.getElementById("selectBusNum").selectedIndex;

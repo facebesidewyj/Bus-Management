@@ -1,5 +1,7 @@
 package pers.yijin.bms.web.action;
 
+import org.apache.struts2.ServletActionContext;
+
 import pers.yijin.bms.base.BaseAction;
 import pers.yijin.bms.domain.Station;
 import pers.yijin.bms.page.PageBean;
@@ -35,5 +37,23 @@ public class StationAction extends BaseAction<Station> {
 	public String updateStation(){
 		this.getStationService().updateStationById(this.getModel());
 		return "updateStation";
+	}
+	
+	public String addStationInHome(){
+		this.getStationService().addStation(this.getModel());
+		return "addStationInHome";
+	}
+	
+
+	public String findStationByName() throws Exception{
+		Station station = this.getStationService().findStationByName(this.getModel().getStationName());
+		ServletActionContext.getResponse().setContentType("text/html;charset=UTF-8");
+		if(station != null)
+		{
+			ServletActionContext.getResponse().getWriter().write("zhandianbunengshiyong");
+		}else{
+			ServletActionContext.getResponse().getWriter().print("站点可以使用");
+		}
+		return "none";
 	}
 }

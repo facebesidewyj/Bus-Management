@@ -1,6 +1,5 @@
 package pers.yijin.bms.domain;
 
-import java.util.Set;
 
 /**
  * 公交车数据模型
@@ -15,15 +14,6 @@ public class Bus {
 	private int startStation;
 	private int endStation;
 	private String bus_time;
-	private Set<Station> stationList;
-
-	public Set<Station> getStationList() {
-		return stationList;
-	}
-
-	public void setStationList(Set<Station> stationList) {
-		this.stationList = stationList;
-	}
 
 	public int getId() {
 		return id;

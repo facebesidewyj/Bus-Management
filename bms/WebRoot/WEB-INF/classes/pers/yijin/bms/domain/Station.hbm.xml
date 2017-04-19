@@ -9,9 +9,5 @@
 		</id>
 		<property name="stationName"></property>
 		<property name="stationOrder"></property>
-		<set name="busList" table="bus_station">
-			<key column="stationId"></key>
-			<many-to-many class="pers.yijin.bms.domain.Bus" column="busId"></many-to-many>
-		</set>
 	</class>
 </hibernate-mapping>

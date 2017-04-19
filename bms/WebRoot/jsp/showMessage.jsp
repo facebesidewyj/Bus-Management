@@ -7,7 +7,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>留言板信息</title>
-		<link href="css/my_domain/main.css" type="text/css" rel="stylesheet">
+		<link href="${pageContext.request.contextPath}/css/my_domain/main.css" type="text/css" rel="stylesheet">
 	</head>
 
 	<body bgcolor="#CCCCFF">

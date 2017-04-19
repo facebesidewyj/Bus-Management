@@ -6,7 +6,7 @@
 		<META http-equiv=Content-Type content="text/html; charset=utf-8">
 		<META content="MSHTML 6.00.2900.3059" name=GENERATOR>
 	</HEAD>
-	<link href="css/my_domain/main.css" type=text/css rel=stylesheet>
+	<link href="${pageContext.request.contextPath}/css/my_domain/main.css" type=text/css rel=stylesheet>
 	<script type="text/javascript">
 		function checkTheme() {
 			var paraTopic = document.form1.theme.value;

@@ -1,24 +1,15 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" errorPage="" %>
 <%@ page import = "java.util.*" %>
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>公交车站点添加页面</title>
-		<link href = "css/home.css" rel = "stylesheet" type = "text/css"/>
-		<link href = "css/style.css" rel = "stylesheet" type = "text/css"/>
-		<link href = "css/theme.css" rel = "stylesheet" type = "text/css" media = "all" title = "Aqua"/>
+		<title>站点添加页面</title>
+		<link href = "${pageContext.request.contextPath}/css/home.css" rel = "stylesheet" type = "text/css"/>
+		<link href = "${pageContext.request.contextPath}/css/style.css" rel = "stylesheet" type = "text/css"/>
+		<link href = "${pageContext.request.contextPath}/css/theme.css" rel = "stylesheet" type = "text/css" media = "all" title = "Aqua"/>
 	</head>
-	<script language="javascript">
-		function checkSt_Windows() {
-			var temp = document.form1.stationName.value;
-			window.open('checkSt_Windows.jsp?stationName='+temp,'站点名称查重','height=300,width=300,top=50,left=250,scrollbars=yes');
-		}
-		function getValueByCheckStWindows(para,stid) {
-			document.form1.stationName.value = para;
-			document.form1.id.value = stid;
-		}
-	</script>
 	
 	<body>
 		<table width = "100%" border = "0" cellpadding = "0" cellspacing = "0">
@@ -47,40 +38,19 @@
 			</tr>
 			<tr>
 				<td>
-					<form name="form1" method="post" action="checkAddStInfo.jsp">
+					<form name="form1" method="post" action="stationAction_addStationInHome">
 						<table width="100%"  border="1" cellpadding="1" cellspacing="0" align="center" bordercolor="#FFFFFF" >
 							<tr>
 								<td align="right">添加站点：</td>
 								<td>
-									<input type="text" name="stationName">&nbsp;&nbsp;
-										<a href="javascript:checkSt_Windows()">站点查重</a>
-									<input type="hidden" name="id" readonly>
+									<s:textfield id="stationName" name="stationName"/>&nbsp;&nbsp;
+									<a href="#" onclick="checkStation()">站点查重</a>
 								</td>
 							</tr>
 							<tr>
-								<td align="right">选择车次：</td>
-								<td>
-									<select name="selectBusNum" id="selectBusNum" onChange="select()">
-										<option>--请选择--</option>						  
-									</select>
-								</td>
-							</tr>
-							<tr>
-								<td align="right">上一站点：</td>
+								<td align="right">站点序号：</td>
 								<td align="left">
-									<input type="text" name="startStation" id="beginSt" readonly >
-								</td>
-							</tr>
-							<tr>
-								<td align="right">下一点站：</td>
-								<td align="left">
-									<input type="text" name="endStation" id="endSt" readonly >
-								</td>
-							</tr>
-							<tr>
-								<td align="right">已有的站点总数：</td>
-								<td align="left">
-									<input type="text" name="stCount" id="stCount" readonly>
+									<s:textfield name="stationOrder"/>
 								</td>
 							</tr>
 							<tr>
@@ -95,5 +65,34 @@
 			</tr>
 		</table>
 		<a href="query.action">回到首页</a>
+		<script type="text/javascript">
+			function checkStation(){
+				var stationName  = document.getElementById("stationName").value;
+				//发送ajax通过部门查询职务
+				//1.获得引擎
+				var xmlhttp;
+				if (window.XMLHttpRequest){
+					// code for IE7+, Firefox, Chrome, Opera, Safari
+				 	 xmlhttp=new XMLHttpRequest();
+				}
+				else{
+					// code for IE6, IE5
+				 	 xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				//2.设置回调函数
+				xmlhttp.onreadystatechange = function(){
+					if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+						//获得返回的数据
+						var text = xmlhttp.responseText;
+						alert(text);
+						}
+				};
+				//3.创建链接
+				var url = "${pageContext.request.contextPath}/stationAction_findStationByName?stationName="+stationName;
+				xmlhttp.open("GET", url);
+				//4.发送请求
+				xmlhttp.send(null);
+			}
+		</script>
 	</body>
 </html>

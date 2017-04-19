@@ -6,7 +6,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>站点列表</title>
-		<link href="css/list.css" rel="stylesheet" type="text/css" />
+		<link href="${pageContext.request.contextPath}/css/list.css" rel="stylesheet" type="text/css" />
 	</head>
 
 	<body  onload="window.parent.contents.location.reload();" bgcolor="#99CCFF" >

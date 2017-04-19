@@ -5,7 +5,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>adminLogin</title>
-		<LINK href="css/my_domain/main.css" type=text/css rel=stylesheet>
+		<LINK href="${pageContext.request.contextPath}/css/my_domain/main.css" type=text/css rel=stylesheet>
 	</head>
 	<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
 	<script type="text/javascript" src="js/jquery.validate.js"></script>
