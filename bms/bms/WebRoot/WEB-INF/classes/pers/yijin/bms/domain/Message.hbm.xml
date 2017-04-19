@@ -3,14 +3,22 @@
 	    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 	    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<class name="pers.yijin.bms.domain.Message" table="message">
-		<id name="id">
-			<generator class="native"></generator>
-		</id>
-		<property name="theme"></property>
-		<property name="message"></property>
-		<property name="msgTime"></property>
-		<many-to-one name="user" class="pers.yijin.bms.domain.User"
-			column="userId"></many-to-one>
-	</class>
+    <class name="pers.yijin.bms.domain.Message" table="message">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <property name="msgTime">
+        	<column name="msgTime"/>
+        </property>
+        <property name="username" type="java.lang.String">
+            <column name="username"  />
+        </property>
+        <property name="theme" type="java.lang.String">
+            <column name="theme" />
+        </property>
+        <property name="message" type="java.lang.String" >
+        	<column name="message"/>
+        </property>
+    </class>
 </hibernate-mapping>

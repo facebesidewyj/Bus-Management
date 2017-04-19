@@ -65,5 +65,6 @@
 				</s:iterator>
 			</table>
 		</center>
+		<a href="query.action">回到首页</a>
 	</body>
 </html>

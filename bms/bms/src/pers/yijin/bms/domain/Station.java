@@ -1,6 +1,5 @@
 package pers.yijin.bms.domain;
 
-import java.util.Set;
 
 /**
  * 站台数据模型
@@ -23,8 +22,6 @@ public class Station {
 		this.stationOrder = stationOrder;
 	}
 
-	private Set<Bus> busList;
-
 	public int getId() {
 		return id;
 	}
@@ -39,14 +36,6 @@ public class Station {
 
 	public void setStationName(String stationName) {
 		this.stationName = stationName;
-	}
-
-	public Set<Bus> getBusList() {
-		return busList;
-	}
-
-	public void setBusList(Set<Bus> busList) {
-		this.busList = busList;
 	}
 
 	@Override

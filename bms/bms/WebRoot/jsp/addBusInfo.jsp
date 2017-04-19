@@ -6,9 +6,9 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 		<title>公交车添加页面</title>
-		<link href = "css/home.css" rel = "stylesheet" type = "text/css"/>
-		<link href = "css/style.css" rel = "stylesheet" type = "text/css"/>
-		<link href = "css/theme.css" rel = "stylesheet" type = "text/css" media = "all" title = "Aqua"/>
+		<link href = "${pageContext.request.contextPath}/css/home.css" rel = "stylesheet" type = "text/css"/>
+		<link href = "${pageContext.request.contextPath}/css/style.css" rel = "stylesheet" type = "text/css"/>
+		<link href = "${pageContext.request.contextPath}/css/theme.css" rel = "stylesheet" type = "text/css" media = "all" title = "Aqua"/>
 	</head>
 	<script language = "javascript">
 		function check() {
@@ -52,13 +52,13 @@
 		<table width = "100%" border = "0" cellpadding = "0" cellspacing = "0">
 			<tr>
 				<td width = "100" height = "25" align = "center" valign="middle" bgcolor="#0082BF">
-					<a href ="/jsp/addBusInfo.jsp">
+					<a href ="${pageContext.request.contextPath}/jsp/addBusInfo.jsp">
 						<strong>添加车次</strong>
 					</a>
 				</td>
 				<td width="4" bgcolor="#F0F7FD"></td>
 				<td width = "100" height = "25" align = "center" valign="middle">
-					<a href = "/jsp/addStInfo.jsp">
+					<a href = "${pageContext.request.contextPath}/jsp/addStInfo.jsp">
 						<strong>添加站点</strong>
 					</a>
 				</td>
@@ -78,7 +78,7 @@
 					<form name="form1" method="post" action="checkAddBusInfo.jsp" onSubmit="return check()">
 						<table width="100%"  border="1" cellpadding="1" cellspacing="0" bordercolor="#FFFFFF" >
 							<tr>
-								<td align="right">车号：</td>
+								<td align="right">车名：</td>
 								<td>
 									<input type="text" name="busName">
 								</td>
@@ -160,5 +160,6 @@
 				</td>
 			</tr>
 		</table>
+		<a href="query.action">回到首页</a>
 	</body>
 </html>

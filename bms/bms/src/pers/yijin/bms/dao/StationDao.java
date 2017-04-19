@@ -5,4 +5,6 @@ import pers.yijin.bms.domain.Station;
 
 public interface StationDao extends BaseDao<Station> {
 
+	Station findStationByName(String stationName);
+
 }

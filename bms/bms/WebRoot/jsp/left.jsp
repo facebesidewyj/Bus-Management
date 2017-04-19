@@ -8,7 +8,7 @@
 		<meta http-equiv="pragma" content="no-cache">
 		<meta http-equiv="cache-control" content="no-cache">
 		<meta http-equiv="expires" content="0">
-		<link href="css/my_domain/main.css" type=text/css rel=stylesheet>
+		<link href="${pageContext.request.contextPath}/css/my_domain/main.css" type=text/css rel=stylesheet>
 	</head>
 	
 	<body>
@@ -61,7 +61,7 @@
 																<c:if test="${user!=null}">
 																	<TR>
 																		<TD align="center" width=22 height=22>
-																			<img src="images/my_domain/pic_item.gif">
+																			<img src="${pageContext.request.contextPath }/images/my_domain/pic_item.gif">
 																		</TD>
 																		<TD align=left>
 																			<A class=font_hui05 href="query.action" target=main><strong>站点和车次查询</strong></A>
@@ -76,16 +76,6 @@
 																		<TD align=left>
 																			<A class=font_hui05 href="operate_show" target=main>
 																				<strong>车次和站点操作</strong>
-																			</A>
-																		</TD>
-																	</TR>
-																	<TR>
-																		<TD align="center" width=22 height=22>
-																			<img src="images/my_domain/pic_item.gif">
-																		</TD>
-																		<TD align=left>
-																			<A class=font_hui05 href="listSt.action" target=main>
-																				<strong>站点操作</strong>
 																			</A>
 																		</TD>
 																	</TR>
@@ -226,7 +216,7 @@
 																				<img src="images/my_domain/pic_item.gif">
 																			</TD>
 																			<TD align=left>
-																				<A class=font_hui05 href="addMessage.jsp" target="main">
+																				<A class=font_hui05 href="${pageContext.request.contextPath}/jsp/addMessage.jsp" target="main">
 																					<strong>留言</strong>
 																				</A>
 																			</TD>
@@ -236,7 +226,7 @@
 																				<img src="images/my_domain/pic_item.gif">
 																			</TD>
 																			<TD align=left>
-																				<A class=font_hui05 href="msg!show.action" target=main>
+																				<A class=font_hui05 href="messageAction_showUserMessage" target=main>
 																					<strong>留言操作</strong>
 																				</A>
 																			</TD>
@@ -248,7 +238,7 @@
 																				<img src="images/my_domain/pic_item.gif">
 																			</TD>
 																			<TD align=left>
-																				<A class=font_hui05 href="listMessage!show.action" target=main>
+																				<A class=font_hui05 href="messageAction_showMessage" target=main>
 																					<strong>留言操作</strong>
 																				</A>
 																			</TD>

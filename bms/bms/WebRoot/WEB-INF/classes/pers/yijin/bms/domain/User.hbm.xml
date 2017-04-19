@@ -12,9 +12,5 @@
 		<property name="address"></property>
 		<property name="age" type="int"></property>
 		<property name="email"></property>
-		<set name="messageList">
-			<key column="userId"></key>
-			<one-to-many class="pers.yijin.bms.domain.Message"/>
-		</set>
 	</class>
 </hibernate-mapping>

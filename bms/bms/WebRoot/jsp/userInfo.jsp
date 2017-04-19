@@ -6,9 +6,9 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>用户信息</title>
-		<link href = "css/home.css" rel = "stylesheet" type = "text/css"/>
-		<link href = "css/style.css" rel = "stylesheet" type = "text/css"/>
-		<link href = "css/theme.css" rel = "stylesheet" type = "text/css" media = "all" title = "Aqua"/>
+		<link href = "${pageContext.request.contextPath}/css/home.css" rel = "stylesheet" type = "text/css"/>
+		<link href = "${pageContext.request.contextPath}/css/style.css" rel = "stylesheet" type = "text/css"/>
+		<link href = "${pageContext.request.contextPath}/css/theme.css" rel = "stylesheet" type = "text/css" media = "all" title = "Aqua"/>
 	</head>
 	
 	<body>
@@ -53,5 +53,6 @@
 				</td>
 			</tr>
 		</table>
+		<a href="query.action">回到首页</a>
 	</body>
 </html>

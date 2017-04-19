@@ -6,15 +6,17 @@
 		<META http-equiv=Content-Type content="text/html; charset=utf-8">
 		<META content="MSHTML 6.00.2900.3059" name=GENERATOR>
 	</HEAD>
-	<link href="css/my_domain/main.css" type=text/css rel=stylesheet>
+	<link href="${pageContext.request.contextPath}/css/my_domain/main.css" type=text/css rel=stylesheet>
 	<script type="text/javascript">
-		function check() {
-			var paraTopic = document.form1.topic.value;
+		function checkTheme() {
+			var paraTopic = document.form1.theme.value;
 			if (paraTopic == "") {
 				alert("留言的主题不能为空！");
 				return false;
 			}
-			var paraMessagetext = document.form1.messagetext.value;
+		}
+		function checkMessageText(){
+			var paraMessagetext = document.form1.message.value;
 			if (paraMessagetext == "") {
 				alert("留言的内容不能为空！");
 				return false;
@@ -26,12 +28,12 @@
 	</script>
 	
 	<BODY>
-		<form action="msg!save.action" name="form1" method="post">
+		<form action="messageAction_addMessage" name="form1" method="post">
 			<TABLE cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
 				<TBODY>
 					<TR>
 						<TD width="100%">
-							<img height=67 src="images/leaf.gif" width=753>
+							<img height=67 src="${pageContext.request.contextPath}/images/leaf.gif" width=753>
 							<BR>
 							<BR>
 						</TD>
@@ -61,14 +63,14 @@
 															<table width="100%" border="0">
 																<tr>
 																	<td>
-																		E-mail:&nbsp;&nbsp;
-																		<input type="text" name="email" value="${user}">
+																		留言人:&nbsp;&nbsp;
+																		<input type="text" name="username" value="${user.username}">
 																	</td>
 																</tr>
 																<tr>
 																	<td>
 																		留言主题:
-																		<input type="text" name="theme">
+																		<input type="text" name="theme" onblur="checkTheme()">
 																	</td>
 																</tr>
 																<tr>
@@ -78,7 +80,7 @@
 																</tr>
 																<tr>
 																	<td>
-																		<textarea name="message" cols="50" rows="10"></textarea>
+																		<textarea name="message" cols="50" rows="10" onblur="checkMessageText()"></textarea>
 																	</td>
 																</tr>
 															</table>
@@ -91,7 +93,7 @@
 													<TR>
 														<TD width="30%">
 															<P align=center>
-																<IMG height=100 src="images/175.jpg" width=87>
+																<IMG height=100 src="${pageContext.request.contextPath}/images/175.jpg" width=87>
 															</P>
 														</TD>
 														<TD vAlign=top width="70%">
@@ -99,7 +101,7 @@
 																<FONT color=#400040><BR></FONT>
 																<FONT color=#400040><BR><BR></FONT>
 															</SPAN>
-															<input type="submit" name="Submit" value="留言" onClick="success()">
+															<input type="submit" name="Submit" value="留言" onclick="success()">
 															&nbsp;&nbsp;&nbsp;
 														</TD>
 													</TR>
@@ -110,7 +112,6 @@
 								</TBODY>
 							</TABLE>
 						</TD>
-						<TD width="11%"></TD>
 					</TR>
 				</TBODY>
 			</TABLE>

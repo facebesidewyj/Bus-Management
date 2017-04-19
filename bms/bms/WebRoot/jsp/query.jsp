@@ -7,7 +7,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>无标题文档</title>
-		<link href="css/my_domain/main.css" type="text/css" rel="stylesheet">
+		<link href="${pageContext.request.contextPath}/css/my_domain/main.css" type="text/css" rel="stylesheet">
 		<script language="javascript">
 		 function loadBusNum() { //将下拉框里的值传给文本框
 			var index = document.getElementById("selectBusNum").selectedIndex;
@@ -31,8 +31,7 @@
 	</head>
 	
 	<body onload="window.parent.contents.location.reload();">
-		<!-- ${MessageSuccess} -->
-		<img src="images/R2013-t-1.gif" width="150" style="position: relative; left: 30%; margin-left: -150;">
+		<img src="${pageContext.request.contextPath }/images/R2013-t-1.gif" width="150" style="position: relative; left: 30%; margin-left: -150;">
 		<table align="center" width="468" border="1" cellpadding="1" cellspacing="0"  bordercolor="#ffffff">
 			<tr>
 				<td bgcolor="#F4F8FF">
@@ -48,7 +47,7 @@
 									<font color="#007ED4" size="2">线路名称</font>&nbsp;
 								</td>
 								<td width="70%">
-									<input type="text" name="busnum">
+									<input type="text" name="busNum">
 									<input type="submit" name="Submit" value="线路查询">
 									&nbsp;(如：1路)
 								</td>
@@ -63,8 +62,8 @@
 											--请选择--
 										</option>
 										<c:forEach items="${buses}" var="bus">
-											<option value="${bus.busNum}">
-												${bus.busNum}路
+											<option value="${bus.busName}">
+												${bus.busName}
 											</option>
 										</c:forEach>
 									</select>
@@ -76,7 +75,7 @@
 			</tr>
 		</table>
 		<br>
-		<img src="images/R2013-t-2.gif" width="150" style="position: relative; left: 30%; margin-left: -150;">
+		<img src="${pageContext.request.contextPath }/images/R2013-t-2.gif" width="150" style="position: relative; left: 30%; margin-left: -150;">
 		<table align="center" width="468" border="1" cellpadding="1" cellspacing="0" bordercolor="#ffffff">
 			<tr>
 				<td bgcolor="#EEFCEE">
@@ -107,8 +106,8 @@
 											--请选择--
 										</option>
 										<c:forEach items="${sts}" var="st">
-											<option value="${st.stID}">
-												${st.stName}
+											<option value="${st.id}">
+												${st.stationName}
 											</option>
 										</c:forEach>
 									</select>
@@ -120,7 +119,7 @@
 			</tr>
 		</table>
 		<br>
-		<img src="images/R2013-t-3.gif" width="150" style="position: relative; left: 30%; margin-left: -150;">
+		<img src="${pageContext.request.contextPath }/images/R2013-t-3.gif" width="150" style="position: relative; left: 30%; margin-left: -150;">
 		<table align="center" width="468" border="1" cellpadding="1" cellspacing="0" bordercolor="#ffffff">
 			<tr>
 				<td bgcolor="#EFDADA">
@@ -150,8 +149,8 @@
 											--请选择--
 										</option>
 										<c:forEach items="${sts}" var="st">
-											<option value="${st.stID}">
-												${st.stName}
+											<option value="${st.id}">
+												${st.stationName}
 											</option>
 										</c:forEach>
 									</select>
@@ -177,8 +176,8 @@
 											--请选择--
 										</option>
 										<c:forEach items="${sts}" var="st">
-											<option value="${st.stID}">
-												${st.stName}
+											<option value="${st.id}">
+												${st.stationName}
 											</option>
 										</c:forEach>
 									</select>

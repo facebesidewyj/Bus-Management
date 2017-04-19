@@ -11,7 +11,7 @@
 			<result name="register">/jsp/userLogin.jsp</result>
 			<result name="input">/jsp/userRegister.jsp</result>
 			<result name="showUserInfo">/jsp/userInfo.jsp</result>
-			<result name="updateUser">/jsp/query.jsp</result>
+			<result name="updateUser" type="redirectAction">query</result>
 		</action>
 	</package>
 </struts>

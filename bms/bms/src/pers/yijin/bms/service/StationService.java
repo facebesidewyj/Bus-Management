@@ -19,4 +19,6 @@ public interface StationService {
 
 	void updateStationById(Station model);
 
+	Station findStationByName(String stationName);
+
 }

@@ -7,7 +7,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>留言板信息</title>
-		<link href="css/my_domain/main.css" type="text/css" rel="stylesheet">
+		<link href="${pageContext.request.contextPath}/css/my_domain/main.css" type="text/css" rel="stylesheet">
 	</head>
 
 	<body bgcolor="#CCCCFF">
@@ -15,28 +15,31 @@
 			<tr bgcolor="#DBECF8">
 				<td width="72" align="center">留言编号</td>
 				<td width="125" align="center">留言时间</td>
-				<td width="146" align="center">留言Email</td>
+				<td width="146" align="center">留言人</td>
 				<td width="127" align="center">留言主题</td>
 				<td width="196" align="center">留言内容</td>
 				<td width="76" align="center">操作</td>
 			</tr>
-			<c:forEach items="${msg}" var="m">
+			<s:iterator value="messageList">
 				<tr>
-					<td align="center">${m.id }</td>
-					<td align="center">${m.msgTime }</td>
-					<td align="center">${m.email }</td>
-					<td align="center">${m.theme }</td>
-					<td align="center">${m.message }</td>
+					<td align="center"> <s:property value="id"/> </td>
+					<td align="center"> <s:property value="msgTime"/> </td>
+					<td align="center"> <s:property value="username"/> </td>
+					<td align="center"> <s:property value="theme"/> </td>
+					<td align="center"> <s:property value="message"/> </td>
 					<td align="center">
-						<a href="admin!deleteMessage.action?ms.id=${m.id}" onclick="return confirm('确认要删除吗？')">删除</a>
+						<a href="messageAction_deleteMessageById?id=${id}" onclick="return confirm('确认要删除吗？')">删除</a>
 					</td>
 				</tr>
-			</c:forEach>
-			<c:if test="${msg==null}">
+			</s:iterator>
+			<c:if test="${messageList==null}">
 				<tr>
-					<td colspan="7" align="center"><font color="#FF0000">对不起,没有消息!</font></td>
+					<td colspan="7" align="center">
+						<font color="#FF0000">对不起,没有消息!</font>
+					</td>
 				</tr>
 			</c:if>
 		</table>
+		<a href="query.action">回到首页</a>
 	</body>
 </html>

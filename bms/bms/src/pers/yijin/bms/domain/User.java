@@ -1,6 +1,5 @@
 package pers.yijin.bms.domain;
 
-import java.util.Set;
 
 /**
  * 用户数据模型
@@ -15,15 +14,6 @@ public class User {
 	private String address;
 	private int age;
 	private String email;
-	private Set<Message> messageList;
-
-	public Set<Message> getMessageList() {
-		return messageList;
-	}
-
-	public void setMessageList(Set<Message> messageList) {
-		this.messageList = messageList;
-	}
 
 	public int getId() {
 		return id;

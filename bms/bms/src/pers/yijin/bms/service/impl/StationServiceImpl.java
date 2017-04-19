@@ -51,4 +51,9 @@ public class StationServiceImpl implements StationService {
 		stationDao.update(model);
 	}
 
+	@Override
+	public Station findStationByName(String stationName) {
+		return stationDao.findStationByName(stationName);
+	}
+
 }
