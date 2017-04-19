@@ -9,17 +9,17 @@ package pers.yijin.bms.domain;
 public class Message {
 
 	private int id;
-	private User user;
+	private String username;
 	private String theme;
 	private String message;
 	private String msgTime;
 
-	public User getUser() {
-		return user;
+	public String getTheme() {
+		return theme;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setTheme(String theme) {
+		this.theme = theme;
 	}
 
 	public String getMsgTime() {
@@ -38,12 +38,12 @@ public class Message {
 		this.id = id;
 	}
 
-	public String getTheme() {
-		return theme;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setTheme(String theme) {
-		this.theme = theme;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getMessage() {
@@ -56,8 +56,8 @@ public class Message {
 
 	@Override
 	public String toString() {
-		return "Message [id=" + id + ", user=" + user + ", theme=" + theme
-				+ ", message=" + message + ", msgTime=" + msgTime + "]";
+		return "Message [id=" + id + ", username=" + username + ", theme="
+				+ theme + ", message=" + message + ", msgTime=" + msgTime + "]";
 	}
 
 }

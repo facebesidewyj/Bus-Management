@@ -6,12 +6,12 @@
 	<package name="user" extends="common" namespace="/">
 		<action name="userAction_*" class="pers.yijin.bms.web.action.UserAction" method="{1}">
 			<result name="success" type="redirectAction">userAction_home</result>
-			<result name="home">/WEB-INF/jsp/home.jsp</result>
-			<result name="toRegister">/WEB-INF/jsp/userRegister.jsp</result>
-			<result name="register">/WEB-INF/jsp/userLogin.jsp</result>
-			<result name="input">/WEB-INF/jsp/userRegister.jsp</result>
-			<result name="showUserInfo">/WEB-INF/jsp/userInfo.jsp</result>
-			<result name="updateUser">/WEB-INF/jsp/query.jsp</result>
+			<result name="home">/jsp/home.jsp</result>
+			<result name="toRegister">/jsp/userRegister.jsp</result>
+			<result name="register">/jsp/userLogin.jsp</result>
+			<result name="input">/jsp/userRegister.jsp</result>
+			<result name="showUserInfo">/jsp/userInfo.jsp</result>
+			<result name="updateUser" type="redirectAction">query</result>
 		</action>
 	</package>
 </struts>

@@ -11,12 +11,12 @@
 		
 		<!-- 配置全局结果视图 -->
 		<global-results>
-			<result name="login">/WEB-INF/jsp/userLogin.jsp</result>
-			<result name="adminLogin">/WEB-INF/jsp/adminLogin.jsp</result>
+			<result name="login">/jsp/userLogin.jsp</result>
+			<result name="adminLogin">/jsp/adminLogin.jsp</result>
 		</global-results>
 		<!--统一访问界面的UIAction-->
 		<action name="uiAction_frame_*">
-			<result>/WEB-INF/jsp/{1}.jsp</result>
+			<result>/jsp/{1}.jsp</result>
 		</action>
 		<!-- 验证码操作 -->
 		<action name="securityCodeImageAction_showSecurityCode" class="pers.yijin.bms.web.action.SecurityCodeImageAction" method="showSecurityCode">
@@ -26,6 +26,18 @@
              <param name="bufferSize">2048</param>
          </result>
     	 </action>
+    	 
+    	 <!-- query列表操作 -->
+		<action name="query" class="pers.yijin.bms.web.action.QueryAction">
+			<result name="success">/jsp/query.jsp</result>
+			<result name="queryBusNum">/jsp/queryBusNum.jsp</result>
+			<result name="queryStInfo">/jsp/queryStInfo.jsp</result>
+			<result name="queryStSt">/jsp/queryStSt.jsp</result>
+		</action>
+		
+		<action name="operate_*" class="pers.yijin.bms.web.action.OperateBusStationAction" method="{1}">
+         	<result name="show">/jsp/addBusInfo.jsp</result>       	
+         </action>
 	</package>
 		
 	

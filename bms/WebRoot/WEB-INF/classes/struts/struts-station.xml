@@ -5,8 +5,8 @@
 <struts>
 	<package name="station" extends="common" namespace="/">
 		<action name="stationAction_*" class="pers.yijin.bms.web.action.StationAction" method="{1}">
-			<result name="showInfo">/WEB-INF/jsp/listSt.jsp</result>
-			<result name="toAddStation">/WEB-INF/jsp/addSt.jsp</result>
+			<result name="showInfo">/jsp/listSt.jsp</result>
+			<result name="toAddStation">/jsp/addSt.jsp</result>
 			<result name="addStation" type="redirectAction">
 				<param name="actionName">stationAction_showInfo</param>
 				<param name="namespace">/</param>
@@ -15,7 +15,7 @@
 				<param name="actionName">stationAction_showInfo</param>
 				<param name="namespace">/</param>
 			</result>
-			<result name="updateStationByIdForUI">/WEB-INF/jsp/updateStInfo.jsp</result>
+			<result name="updateStationByIdForUI">/jsp/updateStInfo.jsp</result>
 			<result name="updateStation" type="redirectAction">stationAction_showInfo</result>
 		</action>
 	</package>

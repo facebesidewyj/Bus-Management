@@ -54,6 +54,13 @@
 	<aop:config>
 		<aop:advisor advice-ref="txAdvice" pointcut="execution(* pers.yijin.crm.service..*.*(..))"/>
 	</aop:config>
+	
+	<bean id="queryDAO" class="pers.yijin.bms.dao.impl.QueryDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="operateDAO" class="pers.yijin.bms.dao.impl.OperateBusStationDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
 	<!-- 导入其他配置文件 -->
 	<import resource="applicationContext-admin.xml"/>
 	<import resource="applicationContext-user.xml"/>

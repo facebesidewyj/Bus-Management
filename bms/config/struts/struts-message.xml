@@ -5,6 +5,11 @@
 <struts>
 	<package name="message" extends="common" namespace="/">
 		<action name="messageAction_*" class="pers.yijin.bms.web.action.MessageAction" method="{1}">
+			<result name="showMessage">/jsp/showMessage.jsp</result>
+			<result name="deleteMessageById" type="redirectAction">messageAction_showMessage</result>
+			<result name="showUserMessage">/jsp/showMessage.jsp</result>
+			<result name="deleteUserMessageById" type="redirectAction">messageAction_showUserMessage</result>
+			<result name="addMessage" type="redirectAction">query</result>
 		</action>
 	</package>
 </struts>
