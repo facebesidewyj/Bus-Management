@@ -63,8 +63,8 @@
 											<TABLE id=AutoNumber1 style="BORDER-COLLAPSE: collapse" borderColor=#e0e1db height=107 cellSpacing=0 cellPadding=0 width=327 border=1>
 												<TBODY>
 													<TR>
-														<TD width=323 height=30 style="background-color: #ffffff">
-															欢迎登录公交查询系统
+														<TD width=323 height=30 style="background-color: #f5f2ed">
+															<font size="3" style="color: green;padding-left: 80px; font-weight: bolder;" >欢迎登录公交查询系统</font>
 														</TD>
 													</TR>
 													<TR>
@@ -73,15 +73,15 @@
 																<TBODY>
 																	<TR>
 																		<TD align="center" width=85>
-																			<img height=100 src="images/ren.gif" width=78 border=0>
+																			<img height=100 src="${pageContext.request.contextPath}/images/ren.gif" width=78 border=0>
 																		</TD>
-																		<TD width=229>
+																		<TD width=200>
 																			<P>
 																				<BR> 用户名:
-																				<s:textfield name="username" />
+																				<s:textfield name="username" size="23"/>
 																				<BR> <BR> 
-																				密码:
-																				<s:password name="password" />
+																				密&nbsp;码:
+																				<s:password name="password" size="23"/>
 																				<SPAN class=form></SPAN>
 																			</P>
 																			<font color="#ff0000">
@@ -89,10 +89,10 @@
 																			</font>  
 																			<s:submit value="登录"/>
 																			<A href="userAction_toRegister">
-																				<IMG height=19 src="images/zhuche.gif" width=70 border=0> 
+																				<IMG height=26 src="${pageContext.request.contextPath}/images/zhuche.gif" width="55" align=top > 
 																			</A>
 																			<a href="adminAction_toAdminLogin">
-																				<font color="#FEA11E">管理员登录</font>
+																				<font color="#FEA11E" size="3" style="padding-left: 22px">管理员登录</font>
 																			</a>
 																		</TD>
 																	</TR>

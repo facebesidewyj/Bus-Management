@@ -30,6 +30,22 @@
 						${enSt.stationName }
 					</h4>
 				</td>
+				<td width="80px">
+					票价：
+				</td>
+				<td>
+					<h4 style="font: '宋体'; color: #009933">
+						${bus.price }
+					</h4>
+				</td>
+				<td width="80px">
+					等级：
+				</td>
+				<td>
+					<h4 style="font: '宋体'; color: #009933">
+						${bus.level}
+					</h4>
+				</td>
 			</tr>
 			<tr>
 				<td colspan="4" style="line-height:25px;">

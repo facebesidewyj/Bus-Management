@@ -16,25 +16,31 @@
 			});
 	</script>
 	
-	<body bgcolor="#E8F3F6">
-		<table border=0 cellspacing=1 cellpadding=4  width="768" align="center" bgcolor="#E8F3F6">
+	<body background="${pageContext.request.contextPath}/images/adminLogin.png">
+		<table border=0 cellspacing=1 cellpadding=4  width="320" align="center" style="padding-top: 200px">
 			<tr>
-				<td>系统管理员登录</td>
+				<td>
+					<font size="4" style="padding-left: 90px; color: lime; font-weight: bolder;">系统管理员登录</font>
+				</td>
 			</tr>
 			<tr>
 				<td>
 					<s:form name="form1" action="adminAction_adminLogin" namespace="/">
 						<table width="100%"  border="1" cellpadding="1" cellspacing="0" >
 							<tr>
-								<td width="10%">管理员名</td>
+								<td width="15%">
+									<font size="2" color="lime">用户名</font>
+								</td>
 								<td>
 									<s:textfield name="username" size="30"/>
 								</td>
 							</tr>
 							<tr>
-								<td width="10%">密码</td>
+								<td width="10%">
+									<font size="2" color="lime">密&nbsp;&nbsp;&nbsp;码</font>
+								</td>
 								<td>
-									<s:password name="password" size="33"/>
+									<s:password name="password" size="30"/>
 								</td>
 							</tr>
 							<tr>
@@ -43,8 +49,8 @@
 								</font>
 							</tr>
 							<tr>
-								<td colspan="2" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<input type="submit" value = "确定" name = "submit"/>&nbsp;&nbsp;
+								<td colspan="2" align="left" style="padding-left: 22px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<input type="submit" value="确定" name="submit"/>&nbsp;&nbsp;
 									<input type="reset" value="重置" name="reset"/>
 								</td>
 							</tr>

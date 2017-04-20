@@ -9,57 +9,57 @@
 		<link href="${pageContext.request.contextPath}/css/list.css" rel="stylesheet" type="text/css" />
 	</head>
 
-	<body  onload="window.parent.contents.location.reload();" bgcolor="#99CCFF" >
-		<table width="525" height="190" border="1" align="center" cellpadding="2" cellspacing="0" bordercolor="#00FF00" bgcolor="#eafce6">
+	<body background="${pageContext.request.contextPath}/images/listSt.jpg" onload="window.parent.contents.location.reload();">
+		<table width="525" height="190" border="1" align="center" cellpadding="2" cellspacing="0" bordercolor="#00FF00">
 			<tr height="30">
 				<td colspan="5">
 					<div align="center">
-						<strong style="content:open-quote; color:#0000FF">
+						<strong style="content:open-quote; color:yellow">
 							公交站点基本信息管理 
 							<span class="STYLE3">
-								<a href="stationAction_toAddStation">添加站点</a>
+								<a href="stationAction_toAddStation" style="color: highlighttext;  margin-left: 400px" >添加站点</a>
 							</span>
 						</strong>
 					</div>
 				</td>
 			</tr>
 			 <tr>
-				<td width="98" height="25" bordercolor="#00FF00" bgcolor="#FFFFCC">
+				<td width="98" height="25" bordercolor="#00FF00">
 					<div align="center">
-						<span class="STYLE2">编号</span>
+						<span class="STYLE2" style="color:yellow; ">编号</span>
 					</div>
 				</td>
 				<td width="152">
 					<div align="center">
-						<span class="STYLE2">站点名称</span>
+						<span class="STYLE2" style="color:yellow; ">站点名称</span>
 					</div>
 				</td>
 				<td width="104">
 					<div align="center">
-						<span class="STYLE2">站点序号</span>
+						<span class="STYLE2" style="color:yellow; ">站点序号</span>
 					</div>
 				</td>
 				<td colspan="2">
 					<div align="center">
-						<span class="STYLE2">站点操作</span>
+						<span class="STYLE2" style="color:yellow; ">站点操作</span>
 					</div>
 				</td>
 			</tr>
 			<s:iterator value="data">
 				<tr>
 					<td height="25">
-						<div align="center" class="STYLE4"> <s:property value="id"/> </div>
+						<div align="center" class="STYLE4" style="color:yellow; "> <s:property value="id"/> </div>
 					</td>
 					<td>
-						<div align="center" class="STYLE4"> <s:property value="stationName"/> </div>
+						<div align="center" class="STYLE4" style="color:yellow; "> <s:property value="stationName"/> </div>
 					</td>
 					<td>
-						<div align="center" class="STYLE4"> <s:property value="stationOrder"/> </div>
+						<div align="center" class="STYLE4" style="color:yellow; "> <s:property value="stationOrder"/> </div>
 					</td>
 					<td width="75" bordercolor="#00FF00">
 						<div align="center">
 							<span class="STYLE4">
-								<s:a namespace="/" action="stationAction_deleteStationById" onclick="return confirm('确认要删除吗？')">
+								<s:a cssStyle="color:yellow; " namespace="/" action="stationAction_deleteStationById" onclick="return confirm('确认要删除吗？')">
 									<s:param name="id" value="id"></s:param>
 									删除
 								</s:a>
@@ -69,7 +69,7 @@
 					<td width="75">
 						<div align="center">
 							<span class="STYLE4">
-								<s:a namespace="/" action="stationAction_updateStationByIdForUI">
+								<s:a cssStyle="color:yellow; " namespace="/" action="stationAction_updateStationByIdForUI">
 									<s:param name="id" value="id"></s:param>
 									更新
 								</s:a>
@@ -81,7 +81,7 @@
 			<tr>
 				<td align="center" colspan="5">
 					<div id="divTopPageNavi" class="list_r_title_text3">
-						<span>第<s:property value="pageNum" />/<s:property value="totalPage" />页</span>
+						<span style="color:yellow; ">第<s:property value="pageNum" />/<s:property value="totalPage" />页</span>
 						<span>
 							<s:if test="pageNum gt 1">
 								<a href="javascript:void(0)" onclick="showPage(1)">[首页]</a>&nbsp;&nbsp;
@@ -89,7 +89,7 @@
 							</s:if>
 							<!--动态滚动条 -->
 							<s:iterator begin="start" end="end" var="num">
-								<a href="#" onclick="showPage(<s:property value="#num" />)"><s:property value="#num" /></a>            
+								<a href="#" onclick="showPage(<s:property value="#num" />)" style="color:yellow; "><s:property value="#num" /></a>            
 							</s:iterator>
 				
 							<s:if test="pageNum lt totalPage">
