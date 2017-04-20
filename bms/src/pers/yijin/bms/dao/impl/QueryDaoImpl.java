@@ -26,8 +26,8 @@ public class QueryDaoImpl extends HibernateDaoSupport implements QueryDao {
 	public int stOrder(String stName, String busNum) {
 		List<BusStation> bs = this
 				.getHibernateTemplate()
-				.find("select bs from BusStation bs ,StInfo st"
-						+ " where bs.stID=st.stID and st.stName=? and bs.busNum=?",
+				.find("select bs from BusStation bs ,Station st"
+						+ " where bs.stationID=st.id and st.stationName=? and bs.busName=?",
 						new Object[] { stName, busNum });
 		if (!bs.isEmpty()) {
 			return ((BusStation) bs.get(0)).getStationOrder();
@@ -41,7 +41,7 @@ public class QueryDaoImpl extends HibernateDaoSupport implements QueryDao {
 	@SuppressWarnings("unchecked")
 	public int stOrder(int st, String busNum) {
 		List<BusStation> list = this.getHibernateTemplate().find(
-				"from BusStation bus where bus.stID=? and bus.busNum=?",
+				"from BusStation bus where bus.stationID=? and bus.busName=?",
 				new Object[] { st, busNum });
 		if (!list.isEmpty()) {
 			return ((BusStation) list.get(0)).getStationOrder();
@@ -66,8 +66,8 @@ public class QueryDaoImpl extends HibernateDaoSupport implements QueryDao {
 		int start = findByName(startSt);
 		int end = findByName(endSt);
 		List<String> list = this.getHibernateTemplate().find(
-				"select a.busNum from BusStation a, BusStation b"
-						+ " where a.stID=? and b.stID=? and a.busNum=b.busNum",
+				"select a.busName from BusStation a, BusStation b"
+						+ " where a.stationID=? and b.stationID=? and a.busName=b.busName",
 				new Object[] { start, end });
 		if (!list.isEmpty()) {
 			return list;
@@ -102,9 +102,10 @@ public class QueryDaoImpl extends HibernateDaoSupport implements QueryDao {
 				.getHibernateTemplate()
 				.find("select station from Station station ,BusStation busStation "
 						+ "where station.id=busStation.stationID and busStation.busName=?",
-						new Object[] { busName });
-		if (!sts.isEmpty())
+						busName);
+		if (!sts.isEmpty()){
 			return sts;
+		}
 		return null;
 	}
 

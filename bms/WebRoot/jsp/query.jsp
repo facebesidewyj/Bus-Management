@@ -9,10 +9,10 @@
 		<title>无标题文档</title>
 		<link href="${pageContext.request.contextPath}/css/my_domain/main.css" type="text/css" rel="stylesheet">
 		<script language="javascript">
-		 function loadBusNum() { //将下拉框里的值传给文本框
-			var index = document.getElementById("selectBusNum").selectedIndex;
-			var value = document.getElementById("selectBusNum").options[index].value;
-			document.getElementsByName("busnum")[0].value = value;
+		 function loadBusNum(x) { //将下拉框里的值传给文本框
+			var temp = document.getElementById("selectBusNum").options[x].text;
+			/* var value = document.getElementById("selectBusNum").options[index].value; */
+			document.getElementsByName("busnum")[0].value = temp;
 
 		 }
 		 function loadStInfo(x) { //将下拉框里的值传给文本框
@@ -40,14 +40,14 @@
 			</tr>
 			<tr>
 				<td>
-					<form name="form1" method="post" action="query!queryBusNum.action">
+					<form name="form1" method="post" action="query_queryBusName">
 						<table width="100%" border="0" cellpadding="0" cellspacing="0">
 							<tr>
 								<td width="30%" align="right">
 									<font color="#007ED4" size="2">线路名称</font>&nbsp;
 								</td>
 								<td width="70%">
-									<input type="text" name="busNum">
+									<input type="text" name="busnum">
 									<input type="submit" name="Submit" value="线路查询">
 									&nbsp;(如：1路)
 								</td>
@@ -57,7 +57,7 @@
 									<font color="#007ED4" size="2">选择输入&nbsp;</font>
 								</td>
 								<td width="70%">
-									<select name="selectBusNum" id="selectBusNum" onChange="loadBusNum()">
+									<select name="selectBusNum" id="selectBusNum" onChange="loadBusNum(this.options.selectedIndex)">
 										<option value="">
 											--请选择--
 										</option>
@@ -84,7 +84,7 @@
 			</tr>
 			<tr>
 				<td>
-					<form name="form2" method="post" action="query!queryStInfo.action" onSubmit="return checkStInfo()">
+					<form name="form2" method="post" action="query_queryStationInfo" onSubmit="return checkStInfo()">
 						<table width="100%" border="0" cellpadding="0" cellspacing="0">
 							<tr>
 								<td width="30%" align="right">
@@ -128,7 +128,7 @@
 			</tr>
 			<tr>
 				<td>
-					<form name="form3" method="post" action="query!queryStSt.action" onSubmit="return checkStInfo2()">
+					<form name="form3" method="post" action="query_queryStationToStation" onSubmit="return checkStInfo2()">
 						<table width="100%" border="0" cellpadding="0" cellspacing="0">
 							<tr>
 								<td width="30%" align="right">

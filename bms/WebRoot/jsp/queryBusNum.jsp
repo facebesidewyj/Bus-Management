@@ -10,7 +10,7 @@
 	
 	<body bgcolor="#CCCCFF">
 		<h3 style="left:200px; position:absolute; top:15px;">
-			您所要查找的线路是：${busnum }路
+			您所要查找的线路是：${busnum }
 		</h3>
 		<table style="width:716px; left:200px; position:absolute; top:45px; ">
 			<tr>
@@ -19,7 +19,7 @@
 				</td>
 				<td>
 					<h4 style="font: '宋体'; color: #009933">
-						${startSt.stName}
+						${startSt.stationName}
 					</h4>
 				</td>
 				<td width="80px">
@@ -27,7 +27,7 @@
 				</td>
 				<td>
 					<h4 style="font: '宋体'; color: #009933">
-						${enSt.stName }
+						${enSt.stationName }
 					</h4>
 				</td>
 			</tr>

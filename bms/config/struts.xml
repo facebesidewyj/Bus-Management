@@ -28,7 +28,7 @@
     	 </action>
     	 
     	 <!-- query列表操作 -->
-		<action name="query" class="pers.yijin.bms.web.action.QueryAction">
+		<action name="query_*" class="pers.yijin.bms.web.action.QueryAction" method="{1}">
 			<result name="success">/jsp/query.jsp</result>
 			<result name="queryBusNum">/jsp/queryBusNum.jsp</result>
 			<result name="queryStInfo">/jsp/queryStInfo.jsp</result>

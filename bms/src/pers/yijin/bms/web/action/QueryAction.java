@@ -24,7 +24,7 @@ public class QueryAction {
 	// queryBusNum.jsp页面里面用的属性
 	private String busnum;
 	private StringBuffer sb = new StringBuffer();;
-	private List<Station> busNumSts;// 一条呢公交线路上的所有站点
+	private List<Station> busNumSts;// 一条公交线路上的所有站点
 	private Station startSt;// 一条公交线路上的起点站
 	private Station enSt;// 一条公交线路上的终点站
 	private Bus bus;
@@ -67,7 +67,7 @@ public class QueryAction {
 
 	}
 
-	public String queryStSt() {
+	public String queryStationToStation() {
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		st2 = queryDAO.st2Through(beginSt, endSt);
 		sb.append("站台【" + beginSt + "】到站台【" + endSt + "】的乘车方案列于下:<br/>");
@@ -137,7 +137,7 @@ public class QueryAction {
 	 * 
 	 * @return
 	 */
-	public String queryStInfo() {
+	public String queryStationInfo() {
 		busSts = queryDAO.findByStName(st);
 		for (BusStation s : busSts) {
 			StringBuffer sb = new StringBuffer();
@@ -183,10 +183,10 @@ public class QueryAction {
 	 * 
 	 * @return
 	 */
-	public String queryBusNum() {
+	public String queryBusName() {
 		busNumSts = queryDAO.getBusNumSts(busnum);
 		int i = 0;
-		sb.append("【" + busnum + "】路公交车经过的所有站点如下：(共计" + busNumSts.size()
+		sb.append("【" + busnum + "】公交车经过的所有站点如下：(共计" + busNumSts.size()
 				+ "站点)<br/>");
 		for (Station sf : busNumSts) {
 			i++;

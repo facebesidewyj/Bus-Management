@@ -12,7 +12,7 @@
 		<frame name="banner" scrolling="no" noresize  src="${pageContext.request.contextPath}/uiAction_frame_title.action">
 		<frameset cols="15%,*">
 			<frame id="contents" name="contents"  src="${pageContext.request.contextPath}/uiAction_frame_left.action" scrolling="NO" noresize>
-			<frame name="main" src="${pageContext.request.contextPath}/uiAction_frame_query.action">
+			<frame name="main" src="query.action">
 		</frameset>
 		<noframes>
 			<body></body>
