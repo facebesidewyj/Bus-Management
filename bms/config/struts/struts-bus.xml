@@ -5,6 +5,8 @@
 <struts>
 	<package name="bus" extends="common" namespace="/">
 		<action name="busAction_*" class="pers.yijin.bms.web.action.BusAction" method="{1}">
+			<result name="addBus" type="redirectAction">query</result>
+			<result name="input">/jsp/addBusInfo.jsp</result>
 		</action>
 	</package>
 </struts>

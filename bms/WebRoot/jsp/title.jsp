@@ -9,16 +9,16 @@
 	<body>
 		<table width="100%"  border="0" cellpadding="0" cellspacing="0">
 			<tr>
-				<td><img src="images/p1.jpg" width="1353" height="29"></td>
+				<td><img src="${pageContext.request.contextPath}/images/p1.jpg" width="1353" height="29"></td>
 			</tr>
 			<tr>
-				<td><img src="images/p2.jpg" width="1352" height="32"></td>
+				<td><img src="${pageContext.request.contextPath}/images/p2.jpg" width="1352" height="32"></td>
 			</tr>
 			<tr>
-				<td><img src="images/p3.jpg" width="1352" height="50"></td>
+				<td><img src="${pageContext.request.contextPath}/images/p3.jpg" width="1352" height="50"></td>
 			</tr>
 			<tr>
-				<td><img src="images/top2004-p4new.jpg" width="1352" height="48"></td>
+				<td><img src="${pageContext.request.contextPath}/images/top2004-p4new.jpg" width="1352" height="48"></td>
 			</tr>
 		</table>
 	</body>

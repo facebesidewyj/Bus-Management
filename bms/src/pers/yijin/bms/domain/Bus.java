@@ -14,6 +14,26 @@ public class Bus {
 	private int startStation;
 	private int endStation;
 	private String bus_time;
+	//票价
+	private String price;
+	//等级
+	private String level;
+	
+	public String getPrice() {
+		return price;
+	}
+
+	public void setPrice(String price) {
+		this.price = price;
+	}
+
+	public String getLevel() {
+		return level;
+	}
+
+	public void setLevel(String level) {
+		this.level = level;
+	}
 
 	public int getId() {
 		return id;

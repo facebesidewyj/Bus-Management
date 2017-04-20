@@ -1,11 +1,11 @@
-<%@ page contentType="text/html; charset=gb2312" language="java" errorPage=""%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib uri="/struts-tags" prefix="s"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-		<title>¹«½»³µÌí¼ÓÒ³Ãæ</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>å…¬äº¤è½¦æ·»åŠ é¡µé¢</title>
 		<link href = "${pageContext.request.contextPath}/css/home.css" rel = "stylesheet" type = "text/css"/>
 		<link href = "${pageContext.request.contextPath}/css/style.css" rel = "stylesheet" type = "text/css"/>
 		<link href = "${pageContext.request.contextPath}/css/theme.css" rel = "stylesheet" type = "text/css" media = "all" title = "Aqua"/>
@@ -13,38 +13,31 @@
 	<script language = "javascript">
 		function check() {
 			var tBusNum = document.form1.busName.value;
-			var len = tBusNum.length;
-			var t="\\d{"+len+"}";
-			var RG=new RegExp(t);
-			var result=RG.exec(tBusNum);
 			if (tBusNum == "") {
-				alert("³µºÅ²»ÄÜÎª¿Õ!");
+				alert("è½¦å·ä¸èƒ½ä¸ºç©º!");
 				return false;
 			}
-			if(result == null ||"null"==typeof(result)){
-				alert("ÊäÈëÖ»ÄÜÊÇ0-9Ö®¼äµÄÊı×Ö");
-				return false;
-			}
-			var tBeginSt = document.form1.startStation.value;
+			var tBeginSt = document.getElementById("start").value;
 			if (tBeginSt == "") {
-				alert("ÆğÊ¼Õ¾Ãû³Æ²»ÄÜÎª¿Õ!");
+				alert("èµ·å§‹ç«™åç§°ä¸èƒ½ä¸ºç©º!");
 				return false;
 			}
-			var tEndSt = document.form1.endStation.value;
+			
+			var tEndSt = document.getElementById("end").value;
 			if (tEndSt == "") {
-				alert("ÖÕµãÕ¾Ãû³Æ²»ÄÜÎª¿Õ!");
+				alert("ç»ˆç‚¹ç«™åç§°ä¸èƒ½ä¸ºç©º!");
 				return false;
 			}
 		}
 		
 		function loadBeginSt(x) {
-			var temp = document.getElementById("selectBeginSt").options[x].text;
-			document.getElementsByName("startStation")[0].value = temp;
+			var temp = document.getElementById("startStation").options[x].text;
+			document.getElementsByName("startSt")[0].value = temp;
 		}
 		
 		function loadEndSt(x) {
-			var temp = document.getElementById("selectEndSt").options[x].text;
-			document.getElementsByName("endStation")[0].value = temp;
+			var temp = document.getElementById("endStation").options[x].text;
+			document.getElementsByName("endSt")[0].value = temp;
 		}
 	</script>
 	
@@ -53,13 +46,13 @@
 			<tr>
 				<td width = "100" height = "25" align = "center" valign="middle" bgcolor="#0082BF">
 					<a href ="${pageContext.request.contextPath}/jsp/addBusInfo.jsp">
-						<strong>Ìí¼Ó³µ´Î</strong>
+						<strong>æ·»åŠ è½¦æ¬¡</strong>
 					</a>
 				</td>
 				<td width="4" bgcolor="#F0F7FD"></td>
 				<td width = "100" height = "25" align = "center" valign="middle">
 					<a href = "${pageContext.request.contextPath}/jsp/addStInfo.jsp">
-						<strong>Ìí¼ÓÕ¾µã</strong>
+						<strong>æ·»åŠ ç«™ç‚¹</strong>
 					</a>
 				</td>
 				<td width="4" bgcolor="#F0F7FD"></td>
@@ -75,84 +68,83 @@
 			</tr>
 			<tr>
 				<td>
-					<form name="form1" method="post" action="checkAddBusInfo.jsp" onSubmit="return check()">
+					<form name="form1" method="post" action="busAction_addBus" onSubmit="return check()">
 						<table width="100%"  border="1" cellpadding="1" cellspacing="0" bordercolor="#FFFFFF" >
 							<tr>
-								<td align="right">³µÃû£º</td>
+								<td align="right">è½¦åï¼š</td>
 								<td>
 									<input type="text" name="busName">
 								</td>
-								<td align="right">ÆğµãÕ¾£º</td>
-								<td align="right">ÆğµãÕ¾£º</td>
+								<td align="right">èµ·ç‚¹ç«™ï¼š</td>
 								<td>
-									<input type="text" name="startStation" readonly>
-										<select id="selectBeginSt" name="startStation" onChange="loadStInfo(this.options.selectedIndex)">
+									<input type="text" name="startSt" id="start"  value="" readonly>
+										<select id="startStation" name="startStation" onChange="loadBeginSt(this.options.selectedIndex)">
 											<option value="">
-												--ÇëÑ¡Ôñ--
+												--è¯·é€‰æ‹©--
 											</option>
 											<c:forEach items="${sts}" var="st">
-												<option value="${st.id}">
+												<option id="startId" value="${st.id}">
 													${st.stationName}
 												</option>
 											</c:forEach>
 										</select>
-									&nbsp;(´ÓÕ¾µã¿âÖĞÌí¼ÓÕ¾µã)
+									&nbsp;(ä»ç«™ç‚¹åº“ä¸­æ·»åŠ ç«™ç‚¹)
 									<font color="red">*</font>
 								</td>
 							</tr>
 							<tr>
-								<td align="right">ÖÕµãÕ¾£º</td>
+								<td align="right">ç»ˆç‚¹ç«™ï¼š</td>
 								<td>
-									<input type="text" name="endStation" id="endSt" readonly>
-										<select id="selectEndSt" name="endStation" onChange="loadStInfo(this.options.selectedIndex)">
+									<input type="text" name="endSt" id="end" readonly>
+										<select id="endStation" name="endStation" onChange="loadEndSt(this.options.selectedIndex)">
 											<option value="">
-												--ÇëÑ¡Ôñ--
+												--è¯·é€‰æ‹©--
 											</option>
 											<c:forEach items="${sts}" var="st">
-												<option value="${st.id}">
+												<option id="endId" value="${st.id}">
 													${st.stationName}
 												</option>
 											</c:forEach>
 										</select>
-									&nbsp;(´ÓÕ¾µã¿âÖĞÌí¼ÓÕ¾µã)
+									&nbsp;(ä»ç«™ç‚¹åº“ä¸­æ·»åŠ ç«™ç‚¹)
 									<font color="red">*</font>
 								</td>
-								<td align="right">Æ±¼Û£º</td>
+								<td align="right">ç¥¨ä»·ï¼š</td>
 								<td>
-									<select name="selectPrice">
-										<option>--ÇëÑ¡Ôñ--</option>
-										<option value="1Ôª">1Ôª</option>
-										<option value="2Ôª">2Ôª</option>
+									<select name="price">
+										<option>--è¯·é€‰æ‹©--</option>
+										<option value="1å…ƒ">1å…ƒ</option>
+										<option value="2å…ƒ">2å…ƒ</option>
 									</select>
 								</td>
 							</tr>
 							<tr>
-								<td align="right">Æû³µµÈ¼¶£º</td>
+								<td align="right">æ±½è½¦ç­‰çº§ï¼š</td>
 								<td>
-									<select name="selectLevel">
-										<option value="">--ÇëÑ¡Ôñ--</option>
-										<option value="ÆÕÍ¨">ÆÕÍ¨</option>
-										<option value="¸ßµµ">¸ßµµ</option>
+									<select name="level">
+										<option value="">--è¯·é€‰æ‹©--</option>
+										<option value="æ™®é€š">æ™®é€š</option>
+										<option value="é«˜æ¡£">é«˜æ¡£</option>
 									</select>
 								</td>
-								<td align="right">Æ±¼ÛÀàĞÍ£º</td>
+								<!-- <td align="right">ç¥¨ä»·ç±»å‹ï¼š</td>
 								<td>
 									<select name="selectNote">
-										<option>--ÇëÑ¡Ôñ--</option>
-										<option value="ÆÕÍ¨Æ±¼Û">ÆÕÍ¨Æ±¼Û</option>
+										<option>--è¯·é€‰æ‹©--</option>
+										<option value="æ™®é€šç¥¨ä»·">æ™®é€šç¥¨ä»·</option>
 									</select>
-								</td>
+								</td> -->
 							</tr>
 							<tr>
-								<td>ÉÏ°àÊ±¼ä£º</td>
+								<td>è¿è¡Œæ—¶é—´ï¼š</td>
 								<td colspan="3" align="left">
-									<input type="text" name="bus_time"/>
+									<s:textfield name="bus_time"/>
 								</td>
 							</tr>
 							<tr>
 								<td colspan="4" align="center">
-									<input type="submit" name="Submit" value="Ìá½»">&nbsp;
-									<input type="reset" name="Submit2" value="ÖØÖÃ">
+									<s:submit value="æäº¤"/>&nbsp;
+									<s:reset value="é‡ç½®"/>
 								</td>
 							</tr>
 						</table>
@@ -160,6 +152,6 @@
 				</td>
 			</tr>
 		</table>
-		<a href="query.action">»Øµ½Ê×Ò³</a>
+		<a href="query.action">å›åˆ°é¦–é¡µ</a>
 	</body>
 </html>

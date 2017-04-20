@@ -11,5 +11,7 @@
 		<property name="startStation"></property>
 		<property name="endStation"></property>
 		<property name="bus_time"></property>
+		<property name="price"></property>
+		<property name="level"></property>
 	</class>
 </hibernate-mapping>

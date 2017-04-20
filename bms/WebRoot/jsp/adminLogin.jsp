@@ -1,14 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib uri="/struts-tags" prefix="s" %>
 <html>
-
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>adminLogin</title>
 		<LINK href="${pageContext.request.contextPath}/css/my_domain/main.css" type=text/css rel=stylesheet>
 	</head>
-	<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
-	<script type="text/javascript" src="js/jquery.validate.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.4.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.validate.js"></script>
 	<script type="text/javascript">
 		$(function(){
 				$("#Verify").click(function(){

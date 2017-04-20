@@ -46,7 +46,7 @@
 		</STYLE>
 		<title>用户登录</title>
 	</head>
-	<BODY background="images/bus.jpg" bgColor=#FFFFFF leftMargin=0 topMargin=0>
+	<BODY background="${pageContext.request.contextPath}/images/bus.jpg" bgColor=#FFFFFF leftMargin=0 topMargin=0>
 		&nbsp; ${registerSuccess}
 		<s:form namespace="/" action="userAction_login">
 			<TABLE cellSpacing=0 cellPadding=0 width=372 align=center border=0>

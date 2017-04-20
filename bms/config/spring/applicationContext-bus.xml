@@ -12,4 +12,11 @@
        					   http://www.springframework.org/schema/aop/spring-aop.xsd
        					   http://www.springframework.org/schema/context 
        					   http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="busDao" class="pers.yijin.bms.dao.impl.BusDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="busService" class="pers.yijin.bms.service.impl.BusServiceImpl">
+		<property name="busDao" ref="busDao"/>
+	</bean>
 </beans>
