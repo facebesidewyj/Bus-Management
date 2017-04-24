@@ -124,7 +124,7 @@
 																			<img src="images/my_domain/pic_item.gif">
 																		</TD>
 																		<TD align=left width=84>
-																			<A class=font_hui05 href="userAction_userLoginout" target=main>
+																			<A class=font_hui05 href="userAction_userLoginout" target="_top" >
 																				<strong onclick="window.parent.location.reload()">用户注销</strong>
 																			</A>
 																		</TD>
@@ -176,7 +176,7 @@
 																			<img src="images/my_domain/pic_item.gif">
 																		</TD>
 																		<TD align=left>
-																			<A class=font_hui05 href="adminAction_adminLoginOut" target=main>
+																			<A class=font_hui05 href="adminAction_adminLoginOut" target="_top">
 																				<strong  onclick="window.parent.location.reload()">管理员注销</strong>
 																			</A>
 																		</TD>

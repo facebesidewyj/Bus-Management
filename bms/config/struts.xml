@@ -8,10 +8,29 @@
 	<constant name="struts.ui.theme" value="simple"></constant>
 	<!-- 配置公共包 -->
 	<package name="common" extends="struts-default" namespace="/">
-		
+		<!--配置自定义拦截器栈-->
+		<interceptors>
+			<!-- 声明拦截器 -->
+			<interceptor name="loginInterceptor" class="pers.yijin.bms.web.interceptor.LoginInterceptor"></interceptor>
+			<!-- <interceptor name="adminLoginInterceptor" class="pers.yijin.bms.web.interceptor.AdminLoginInterceptor"></interceptor> -->
+			<!-- 定义拦截器栈 -->
+			<interceptor-stack name="myInterceptor">
+				<interceptor-ref name="defaultStack">
+					<param name="fileUpload.allowedExtensions">xls,xslx</param>
+				</interceptor-ref>
+				<interceptor-ref name="loginInterceptor">
+					<param name="excludeMethods">login,toAdminLogin,showSecurityCode,adminLogin,showInfo,toHome,home,
+								 showUserList,adminLoginOut,toRegister,register,showMessage,deleteMessageById,show,
+								 addBus,toAddStation,addStation,deleteStationById,updateStationByIdForUI,updateStation,addStationInHome,
+								 findStationByName,execute</param>
+				</interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<!-- 使用自定义拦截器栈替换默认拦截器栈 -->
+		<default-interceptor-ref name="myInterceptor"></default-interceptor-ref>
 		<!-- 配置全局结果视图 -->
 		<global-results>
-			<result name="login">/jsp/userLogin.jsp</result>
+			<result name="login" type="redirect">/jsp/userLogin.jsp</result>
 			<result name="adminLogin">/jsp/adminLogin.jsp</result>
 		</global-results>
 		<!--统一访问界面的UIAction-->

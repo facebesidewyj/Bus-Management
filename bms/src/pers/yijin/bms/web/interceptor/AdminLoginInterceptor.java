@@ -1,5 +1,7 @@
 package pers.yijin.bms.web.interceptor;
 
+import org.apache.struts2.ServletActionContext;
+
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.ActionSupport;
@@ -20,6 +22,8 @@ public class AdminLoginInterceptor extends MethodFilterInterceptor {
 				ActionSupport actionSupport = (ActionSupport) action;
 				//使用ActionSupport类添加提示信息
 				actionSupport.addFieldError("", "您还未登录，请登录！");
+				String url = "/jsp/adminLogin.jsp";
+				ServletActionContext.getResponse().getWriter().print("<script>\n\r self.top.location.href=\""+url+"\"\n\r </script>\n\r");
 			}
 			//未登录，需要登录
 			return "adminLogin";

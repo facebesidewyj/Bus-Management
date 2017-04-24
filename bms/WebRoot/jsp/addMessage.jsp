@@ -63,14 +63,14 @@
 															<table width="100%" border="0">
 																<tr>
 																	<td>
-																		留言人:&nbsp;&nbsp;
+																		留言人:&nbsp;
 																		<input type="text" name="username" value="${user.username}">
 																	</td>
 																</tr>
 																<tr>
 																	<td>
 																		留言主题:
-																		<input type="text" name="theme" onblur="checkTheme()">
+																		<input type="text" name="theme" onblur="checkTheme()" size="20">
 																	</td>
 																</tr>
 																<tr>

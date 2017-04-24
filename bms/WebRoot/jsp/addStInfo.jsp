@@ -15,7 +15,7 @@
 		<table width = "100%" border = "0" cellpadding = "0" cellspacing = "0">
 			<tr>
 				<td width = "100" height = "25" align = "center" valign="middle">
-					<a href ="${pageContext.request.contextPath}/jsp/addBusInfo.jsp">
+					<a href ="operate_show">
 						<strong>添加车次</strong>
 					</a>
 				</td>
