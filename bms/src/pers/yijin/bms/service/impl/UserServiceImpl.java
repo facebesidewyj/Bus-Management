@@ -40,4 +40,9 @@ public class UserServiceImpl implements UserService {
 		return userDao.findById(id);
 	}
 
+	@Override
+	public void deleteUserById(User model) {
+		userDao.delete(model);
+	}
+
 }

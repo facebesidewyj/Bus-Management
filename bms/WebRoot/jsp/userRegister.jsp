@@ -96,7 +96,7 @@
 							<span class=STYLE1>基本选项</span>
 						</td>
 					</tr>
-					<tr bgcolor="#eafce6">
+					<tr bgcolor="#99FFFF">
 						<td width=102>
 							<font color=#cc0000>*</font> 用 户 名：
 						</td>
@@ -110,7 +110,7 @@
 							</div>
 						</td>
 					</tr>
-					<tr>
+					<tr bgcolor="#99FFFF">
 						<td>
 							<font color=#cc0000>*</font> 密 码：
 						</td>
@@ -124,7 +124,7 @@
 							</div>
 						</td>
 					</tr>
-					<tr bgcolor="#eafce6">
+					<tr bgcolor="#99FFFF">
 						<td>
 							<font color=#cc0000>*</font> 确认密码：
 						</td>
@@ -138,7 +138,7 @@
 							</div>
 						</td>
 					</tr>
-					<tr>
+					<tr bgcolor="#99FFFF">
 						<td>
 							<font color=#cc0000>*</font> 地 &nbsp; 址：
 						</td>
@@ -149,7 +149,7 @@
 							</div>
 						</td>
 					</tr>
-					<tr bgcolor="#eafce6">
+					<tr bgcolor="#99FFFF">
 						<td>
 							&nbsp;年&nbsp; 龄：
 						</td>
@@ -173,7 +173,7 @@
 							<SPAN class=STYLE6></SPAN>
 						</td>
 					</tr>
-					<tr>
+					<tr bgcolor="#99FFFF">
 						<td width="108" height="32">
 							<FONT color=#cc0000>*</FONT> 邮 &nbsp; 箱：
 						</td>
@@ -186,7 +186,7 @@
 
 						</td>
 					</tr>
-					<tr>
+					<tr bgcolor="#99FFFF">
 						<td height="70">
 							<FONT color=#cc0000>*</FONT> 验 证 码：
 						</td>

@@ -51,8 +51,8 @@
 				</td>
 				<td width="4" bgcolor="#F0F7FD"></td>
 				<td width = "100" height = "25" align = "center" valign="middle">
-					<a href = "${pageContext.request.contextPath}/jsp/addStInfo.jsp">
-						<strong>添加站点</strong>
+					<a href = "${pageContext.request.contextPath}/busAction_findAllBus">
+						<strong>添加线路</strong>
 					</a>
 				</td>
 				<td width="4" bgcolor="#F0F7FD"></td>
@@ -127,13 +127,6 @@
 										<option value="高档">高档</option>
 									</select>
 								</td>
-								<!-- <td align="right">票价类型：</td>
-								<td>
-									<select name="selectNote">
-										<option>--请选择--</option>
-										<option value="普通票价">普通票价</option>
-									</select>
-								</td> -->
 							</tr>
 							<tr>
 								<td>运行时间：</td>

@@ -79,8 +79,8 @@
 				</tr>
 			</s:iterator>
 			<tr>
-				<td align="center" colspan="5">
-					<div id="divTopPageNavi" class="list_r_title_text3">
+				<td align="left" colspan="5">
+					<div id="divTopPageNavi" class="list_r_title_text3" style="left:-20%; position: relative; line-height: 20px;">
 						<span style="color:yellow; ">第<s:property value="pageNum" />/<s:property value="totalPage" />页</span>
 						<span>
 							<s:if test="pageNum gt 1">

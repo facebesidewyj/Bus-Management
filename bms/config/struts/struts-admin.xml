@@ -5,7 +5,6 @@
 <struts>
 	<package name="admin" extends="common" namespace="/">
 		<action name="adminAction_*" class="pers.yijin.bms.web.action.AdminAction" method="{1}">
-			<result name="toAdminLogin">/jsp/adminLogin.jsp</result>
 			<result name="success" type="redirectAction">stationAction_showInfo</result>
 			<result name="toHome" type="redirectAction">userAction_home</result>
 			<result name="showUserList">/jsp/listUser.jsp</result>

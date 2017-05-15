@@ -4,6 +4,7 @@ import java.lang.reflect.ParameterizedType;
 
 import pers.yijin.bms.service.AdminService;
 import pers.yijin.bms.service.BusService;
+import pers.yijin.bms.service.BusStationService;
 import pers.yijin.bms.service.MessageService;
 import pers.yijin.bms.service.StationService;
 import pers.yijin.bms.service.UserService;
@@ -44,6 +45,16 @@ public class BaseAction<T> extends ActionSupport implements ModelDriven<T> {
 	private MessageService messageService;
 	private BusService busService;
 	private StationService stationService;
+	private BusStationService busStationService;
+	
+
+	public BusStationService getBusStationService() {
+		return busStationService;
+	}
+
+	public void setBusStationService(BusStationService busStationService) {
+		this.busStationService = busStationService;
+	}
 
 	public AdminService getAdminService() {
 		return adminService;

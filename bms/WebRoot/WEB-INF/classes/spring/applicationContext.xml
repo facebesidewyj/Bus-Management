@@ -31,7 +31,6 @@
 				<prop key="hibernate.show_sql">true</prop>
 				<prop key="hibernate.format_sql">true</prop>
 				<prop key="hibernate.current_session_context_class">thread</prop>
-				<prop key="hibernate.hbm2ddl.auto">update</prop>
 			</props>
 		</property>
 		<property name="mappingLocations" value="classpath:pers/yijin/bms/domain/*.hbm.xml"></property>
@@ -67,4 +66,5 @@
 	<import resource="applicationContext-bus.xml"/>
 	<import resource="applicationContext-message.xml"/>
 	<import resource="applicationContext-station.xml"/>
+	<import resource="applicationContext-busStation.xml"/>
 </beans>

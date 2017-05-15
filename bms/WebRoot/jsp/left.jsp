@@ -75,7 +75,7 @@
 																		</TD>
 																		<TD align=left>
 																			<A class=font_hui05 href="operate_show" target=main>
-																				<strong>车次和站点操作</strong>
+																				<strong>车次和线路操作</strong>
 																			</A>
 																		</TD>
 																	</TR>

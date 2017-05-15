@@ -77,4 +77,9 @@ public class UserAction extends BaseAction<User> {
 		return "login";
 	}
 	
+	public String deleteUserById(){
+		this.getUserService().deleteUserById(this.getModel());
+		return "deleteUserById";
+	}
+	
 }

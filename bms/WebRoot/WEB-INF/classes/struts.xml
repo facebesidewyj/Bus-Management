@@ -22,7 +22,7 @@
 					<param name="excludeMethods">login,toAdminLogin,showSecurityCode,adminLogin,showInfo,toHome,home,
 								 showUserList,adminLoginOut,toRegister,register,showMessage,deleteMessageById,show,
 								 addBus,toAddStation,addStation,deleteStationById,updateStationByIdForUI,updateStation,addStationInHome,
-								 findStationByName,execute</param>
+								 findStationByName,execute,deleteUserById,findAllBus,addBusStation</param>
 				</interceptor-ref>
 			</interceptor-stack>
 		</interceptors>
@@ -30,8 +30,8 @@
 		<default-interceptor-ref name="myInterceptor"></default-interceptor-ref>
 		<!-- 配置全局结果视图 -->
 		<global-results>
-			<result name="login" type="redirect">/jsp/userLogin.jsp</result>
-			<result name="adminLogin">/jsp/adminLogin.jsp</result>
+			<result name="login">/jsp/userLogin.jsp</result>
+			<result name="adminLogin">/adminLogin.jsp</result>
 		</global-results>
 		<!--统一访问界面的UIAction-->
 		<action name="uiAction_frame_*">
@@ -66,4 +66,5 @@
 	<include file="struts/struts-message.xml"></include>
 	<include file="struts/struts-bus.xml"></include>
 	<include file="struts/struts-station.xml"></include>
+	<include file="struts/struts-busStation.xml"></include>
 </struts>

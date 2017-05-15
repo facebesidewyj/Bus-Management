@@ -55,7 +55,7 @@
 						</td>
 						<td>
 							<div align="center" class="STYLE2" >
-								<s:a action="adminAction_deleteUserById" onclick="return confirm('确认要删除吗？')">
+								<s:a action="userAction_deleteUserById" onclick="return confirm('确认要删除吗？')">
 									<s:param name="id" value="id"></s:param>
 									删除
 								</s:a>

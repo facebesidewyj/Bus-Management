@@ -21,7 +21,8 @@
 							<div align="right">站点名称：</div>
 						</td>
 					    <td width="383">
-					    	<s:textfield name="stationName"/>
+					    	<s:textfield id="stationName" name="stationName"/>
+					    	<a href="#" onclick="checkStation()">站点查重</a>
 					    </td>
 					 </tr>
 					 <tr>
@@ -44,4 +45,33 @@
 			</s:form>
 		</center>
 	</body>
+	<script type="text/javascript">
+	function checkStation(){
+		var stationName  = document.getElementById("stationName").value;
+		//发送ajax通过部门查询职务
+		//1.获得引擎
+		var xmlhttp;
+		if (window.XMLHttpRequest){
+			// code for IE7+, Firefox, Chrome, Opera, Safari
+		 	 xmlhttp=new XMLHttpRequest();
+		}
+		else{
+			// code for IE6, IE5
+		 	 xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		//2.设置回调函数
+		xmlhttp.onreadystatechange = function(){
+			if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+				//获得返回的数据
+				var text = xmlhttp.responseText;
+				alert(text);
+				}
+		};
+		//3.创建链接
+		var url = "${pageContext.request.contextPath}/stationAction_findStationByName?stationName="+stationName;
+		xmlhttp.open("GET", url);
+		//4.发送请求
+		xmlhttp.send(null);
+	}
+	</script>
 </html>

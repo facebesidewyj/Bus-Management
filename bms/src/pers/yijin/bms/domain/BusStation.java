@@ -1,13 +1,11 @@
 package pers.yijin.bms.domain;
 
-import java.util.Set;
 
 public class BusStation {
 	private Integer id;
 	private String busName;
 	private Integer stationID;
 	private Integer stationOrder;
-	private Set<Station> stationSet;
 
 	public Integer getId() {
 		return id;
@@ -39,14 +37,6 @@ public class BusStation {
 
 	public void setStationOrder(Integer stationOrder) {
 		this.stationOrder = stationOrder;
-	}
-
-	public Set<Station> getStationSet() {
-		return stationSet;
-	}
-
-	public void setStationSet(Set<Station> stationSet) {
-		this.stationSet = stationSet;
 	}
 
 }

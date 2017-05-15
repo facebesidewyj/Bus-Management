@@ -39,18 +39,12 @@ public class StationAction extends BaseAction<Station> {
 		return "updateStation";
 	}
 	
-	public String addStationInHome(){
-		this.getStationService().addStation(this.getModel());
-		return "addStationInHome";
-	}
-	
-
 	public String findStationByName() throws Exception{
 		Station station = this.getStationService().findStationByName(this.getModel().getStationName());
 		ServletActionContext.getResponse().setContentType("text/html;charset=UTF-8");
 		if(station != null)
 		{
-			ServletActionContext.getResponse().getWriter().write("zhandianbunengshiyong");
+			ServletActionContext.getResponse().getWriter().write("站点已被添加过");
 		}else{
 			ServletActionContext.getResponse().getWriter().print("站点可以使用");
 		}

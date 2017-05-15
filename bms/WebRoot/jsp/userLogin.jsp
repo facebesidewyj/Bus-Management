@@ -1,119 +1,42 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" errorPage=""%>
 <%@ taglib uri="/struts-tags" prefix="s"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<STYLE type=text/css>
-		TD {
-			FONT-WEIGHT: normal;
-			FONT-SIZE: 9pt;
-			FONT-FAMILY: "宋体", "serif"
-		}
-		
-		A:link {
-			TEXT-DECORATION: none
-		}
-		
-		A:visited {
-			FONT-WEIGHT: normal;
-			TEXT-DECORATION: none
-		}
-		
-		BODY {
-			FONT-SIZE: 9pt;
-			FONT-FAMILY: "宋体", "serif"
-		}
-		
-		TR {
-			FONT-SIZE: 9pt;
-			FONT-FAMILY: "宋体", "serif"
-		}
-		
-		.unnamed1 {
-			FONT-WEIGHT: bold;
-			FONT-SIZE: 9pt
-		}
-		
-		.p9 {
-			FONT-SIZE: 9pt;
-			FONT-FAMILY: "宋体"
-		}
-		
-		.unnamed2 {
-			FONT-SIZE: 11pt
-		}
-		</STYLE>
-		<title>用户登录</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style1.css" />
+		<style type="text/css">
+			.download{margin:20px 33px 10px;*margin-bottom:30px;padding:5px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;background:#e6e6e6;border:1px dashed #df0031;font-size:14px;font-family:Comic Sans MS;font-weight:bolder;color:#555}
+			.download a{padding-left:5px;font-size:14px;font-weight:normal;color:#555;text-decoration:none;letter-spacing:1px}
+			.download a:hover{text-decoration:underline;color:#36F}
+			.download span{float:right}
+		</style>
 	</head>
-	<BODY background="${pageContext.request.contextPath}/images/bus.jpg" bgColor=#FFFFFF leftMargin=0 topMargin=0>
-		&nbsp; ${registerSuccess}
-		<s:form namespace="/" action="userAction_login">
-			<TABLE cellSpacing=0 cellPadding=0 width=372 align=center border=0>
-				<TBODY>
-					<TR>
-						<TD colSpan=3>&nbsp;</TD>
-					</TR>
-					<TR>
-						<TD height=175>
-							<TABLE cellSpacing=0 cellPadding=0 width=348 border=0>
-								<TBODY>
-									<TR>
-										<TD align="center" height=120>
-											<TABLE id=AutoNumber1 style="BORDER-COLLAPSE: collapse" borderColor=#e0e1db height=107 cellSpacing=0 cellPadding=0 width=327 border=1>
-												<TBODY>
-													<TR>
-														<TD width=323 height=30 style="background-color: #f5f2ed">
-															<font size="3" style="color: green;padding-left: 80px; font-weight: bolder;" >欢迎登录公交查询系统</font>
-														</TD>
-													</TR>
-													<TR>
-														<TD bgColor=#f5f2ed>
-															<TABLE cellSpacing=0 cellPadding=0 width=314 border=0>
-																<TBODY>
-																	<TR>
-																		<TD align="center" width=85>
-																			<img height=100 src="${pageContext.request.contextPath}/images/ren.gif" width=78 border=0>
-																		</TD>
-																		<TD width=200>
-																			<P>
-																				<BR> 用户名:
-																				<s:textfield name="username" size="23"/>
-																				<BR> <BR> 
-																				密&nbsp;码:
-																				<s:password name="password" size="23"/>
-																				<SPAN class=form></SPAN>
-																			</P>
-																			<font color="#ff0000">
-																				<s:fielderror></s:fielderror>
-																			</font>  
-																			<s:submit value="登录"/>
-																			<A href="userAction_toRegister">
-																				<IMG height=26 src="${pageContext.request.contextPath}/images/zhuche.gif" width="55" align=top > 
-																			</A>
-																			<a href="adminAction_toAdminLogin">
-																				<font color="#FEA11E" size="3" style="padding-left: 22px">管理员登录</font>
-																			</a>
-																		</TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</TD>
-									</TR>
-								</TBODY>
-							</TABLE>
-						</TD>
-					</TR>
-				</TBODY>
-			</TABLE>
-		</s:form>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
 
-		<table width="768" border="0" align="center"/>
-	</BODY>
+	<body>
+		<div class="main">
+			<div class="header hide"> </div>
+			<div class="content">
+				<div class="title hide"></div>
+				<s:form name="login" action="userAction_login">
+					<fieldset>
+						<font color="#ff0000" style="left: 45%; top: 51%; position: absolute;"> <s:fielderror/></font>
+						<div class="input">
+							<s:textfield cssClass="input_all name" name="username"  id="name" placeholder="用户名" onfocus="this.className='input_all name_now';" onblur="this.className='input_all name'" maxLength="24"/>
+						</div>
+						<div class="input">
+							<s:password cssClass="input_all password" name="password" placeholder="密码"  id="password" onfocus="this.className='input_all password_now';" onblur="this.className='input_all password'" maxLength="24"/>
+						</div>
+						<div class="enter">
+							<input class="button1 hide" name="submit" type="submit" value="登录" />
+							<input class="button2 hide" name="reset" type="reset" value="重置" /> 
+							<a class="register" href="${pageContext.request.contextPath}/userAction_toRegister"></a> 
+						</div>
+					</fieldset>
+				</s:form>
+			</div>
+		</div>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/js/placeholder.js"></script>
+	</body>
 </html>

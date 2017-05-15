@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" errorPage="" %>
 <%@ page import = "java.util.*" %>
 <%@ taglib uri="/struts-tags" prefix="s"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
@@ -21,8 +22,8 @@
 				</td>
 				<td width="4" bgcolor="#F0F7FD"></td>
 				<td width = "100" height = "25" align = "center" valign="middle" bgcolor="#0082BF">
-					<a href = "${pageContext.request.contextPath}/jsp/addStInfo.jsp">
-						<strong>添加站点</strong>
+					<a href = "${pageContext.request.contextPath}/busAction_findAllBus">
+						<strong>添加线路</strong>
 					</a>
 				</td>
 				<td width="4" bgcolor="#F0F7FD"></td>
@@ -38,19 +39,48 @@
 			</tr>
 			<tr>
 				<td>
-					<form name="form1" method="post" action="stationAction_addStationInHome">
+					<form name="form1" method="post" action="busStationAction_addBusStation">
 						<table width="100%"  border="1" cellpadding="1" cellspacing="0" align="center" bordercolor="#FFFFFF" >
 							<tr>
 								<td align="right">添加站点：</td>
 								<td>
-									<s:textfield id="stationName" name="stationName"/>&nbsp;&nbsp;
-									<a href="#" onclick="checkStation()">站点查重</a>
+									<input type="text" name="stationName" value="" readonly>
+									<select id="stationname" name="stationID" onChange="loadStation(this.options.selectedIndex)">
+											<option value="">
+												--请选择--
+											</option>
+											<c:forEach items="${sts}" var="st">
+												<option id="startId" value="${st.id}">
+													${st.stationName}
+												</option>
+											</c:forEach>
+										</select>
+									&nbsp;(从站点库中添加站点)
+									<font color="red">*</font>
 								</td>
 							</tr>
 							<tr>
 								<td align="right">站点序号：</td>
 								<td align="left">
 									<s:textfield name="stationOrder"/>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">所属车次选择：</td>
+								<td>
+									<input type="text" name="busName" value="" readonly>
+										<select id="busname" onChange="loadBus(this.options.selectedIndex)">
+											<option value="">
+												--请选择--
+											</option>
+											<c:forEach items="${buses}" var="bus">
+												<option value="${bus.busName}">
+												${bus.busName}
+												</option>
+											</c:forEach>
+										</select>
+									&nbsp;(请从车库中添加)
+									<font color="red">*</font>
 								</td>
 							</tr>
 							<tr>
@@ -66,32 +96,14 @@
 		</table>
 		<a href="query.action">回到首页</a>
 		<script type="text/javascript">
-			function checkStation(){
-				var stationName  = document.getElementById("stationName").value;
-				//发送ajax通过部门查询职务
-				//1.获得引擎
-				var xmlhttp;
-				if (window.XMLHttpRequest){
-					// code for IE7+, Firefox, Chrome, Opera, Safari
-				 	 xmlhttp=new XMLHttpRequest();
-				}
-				else{
-					// code for IE6, IE5
-				 	 xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-				}
-				//2.设置回调函数
-				xmlhttp.onreadystatechange = function(){
-					if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
-						//获得返回的数据
-						var text = xmlhttp.responseText;
-						alert(text);
-						}
-				};
-				//3.创建链接
-				var url = "${pageContext.request.contextPath}/stationAction_findStationByName?stationName="+stationName;
-				xmlhttp.open("GET", url);
-				//4.发送请求
-				xmlhttp.send(null);
+			function loadBus(x) {
+				var temp = document.getElementById("busname").options[x].text;
+				document.getElementsByName("busName")[0].value = temp;
+			}
+			
+			function loadStation(x) {
+				var temp = document.getElementById("stationname").options[x].text;
+				document.getElementsByName("stationName")[0].value = temp;
 			}
 		</script>
 	</body>

@@ -14,4 +14,6 @@ public interface UserService {
 
 	User findUserById(int id);
 
+	void deleteUserById(User model);
+
 }

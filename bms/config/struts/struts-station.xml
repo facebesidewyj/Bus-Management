@@ -17,7 +17,6 @@
 			</result>
 			<result name="updateStationByIdForUI">/jsp/updateStInfo.jsp</result>
 			<result name="updateStation" type="redirectAction">stationAction_showInfo</result>
-			<result name="addStationInHome" type="redirectAction">query</result>
 		</action>
 	</package>
 </struts>

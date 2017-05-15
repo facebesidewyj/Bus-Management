@@ -62,7 +62,7 @@
 											--请选择--
 										</option>
 										<c:forEach items="${buses}" var="bus">
-											<option value="${bus.busName}">
+S											<option value="${bus.busName}">
 												${bus.busName}
 											</option>
 										</c:forEach>
@@ -136,7 +136,7 @@
 								</td>
 								<td width="70%">
 									<input type="text" name="beginSt">
-									&nbsp;(如：人民南路)
+									&nbsp;(如：客运中心)
 								</td>
 							</tr>
 							<tr>

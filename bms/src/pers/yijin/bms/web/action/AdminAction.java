@@ -10,13 +10,6 @@ import pers.yijin.bms.domain.User;
 
 @SuppressWarnings("serial")
 public class AdminAction extends BaseAction<Admin> {
-	/**
-	 * 
-	 * @return
-	 */
-	public String toAdminLogin() {
-		return "toAdminLogin";
-	}
 
 	/**
 	 * 
@@ -59,7 +52,7 @@ public class AdminAction extends BaseAction<Admin> {
 	 */
 	public String adminLoginOut(){
 		ActionContext.getContext().getSession().remove("admin");
-		return "toAdminLogin";
+		return "adminLogin";
 	}
 	
 }
